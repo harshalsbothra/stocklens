@@ -11,14 +11,18 @@ const symbols: Record<string,string> = {
 };
 
 export async function GET(request: Request) {
-  const ticker = new URL(request.url).searchParams.get("ticker")?.toUpperCase() || "";
+  const params = new URL(request.url).searchParams;
+  const ticker = params.get("ticker")?.toUpperCase() || "";
+  const range = params.get("range") || "1d";
+  const intervalByRange: Record<string,string> = { "1d":"5m", "1w":"30m", "1mo":"1h", "1y":"1d", "5y":"1wk" };
+  const interval = intervalByRange[range] || "5m";
   const symbol = symbols[ticker] || (ticker.endsWith(".NS") || ticker.startsWith("^") ? ticker : null);
   if (!symbol) return NextResponse.json({ error:"Unsupported ticker" }, { status:400 });
 
   try {
     const url = new URL(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}`);
-    url.searchParams.set("range","1d");
-    url.searchParams.set("interval","5m");
+    url.searchParams.set("range",range);
+    url.searchParams.set("interval",interval);
     url.searchParams.set("includePrePost","true");
     const response = await fetch(url, { cache:"no-store", headers:{ "User-Agent":"StockLens/1.0" } });
     if (!response.ok) throw new Error(`Provider returned ${response.status}`);
@@ -46,6 +50,8 @@ export async function GET(request: Request) {
       exchange: meta.exchangeName || "NSE",
       marketState: meta.marketState || "CLOSED",
       asOf: new Date((meta.regularMarketTime || Math.floor(Date.now()/1000))*1000).toISOString(),
+      range,
+      interval,
       points,
       source:"Yahoo Finance chart feed",
     }, { headers:{ "Cache-Control":"no-store" }});
