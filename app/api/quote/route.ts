@@ -73,9 +73,12 @@ export async function GET(request:Request){
 
     // Development fallback only. Production StockLens should set the exchange-specific
     // licensed feed URL/token so exchange data is not sourced from Yahoo.
-    if(exchange==="BSE" || exchange==="MCX")return NextResponse.json({error:`${exchange} licensed market-data feed is not configured`},{status:503});
+    // Public/development fallback: Yahoo exposes Indian NSE (.NS) and BSE (.BO)
+    // securities. MCX commodity contracts are not consistently exposed there, so
+    // we keep MCX gated behind an authorized feed rather than substituting unrelated data.
+    if(exchange==="MCX")return NextResponse.json({error:"MCX commodity market-data feed is not available from the public fallback source"},{status:503});
 
-    const yahooSymbol=`${symbol}.NS`;
+    const yahooSymbol=exchange==="BSE" ? `${symbol}.BO` : `${symbol}.NS`;
     const url=new URL(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol)}`);
     url.searchParams.set("range",range); url.searchParams.set("interval",interval); url.searchParams.set("includePrePost","true");
     const response=await fetch(url,{cache:"no-store",headers:{"User-Agent":"StockLens/1.0"}});
@@ -88,7 +91,7 @@ export async function GET(request:Request){
     const timestamps:number[]=result?.timestamp??[];
     const closes:Array<number|null>=result?.indicators?.quote?.[0]?.close??[];
     const points=timestamps.map((ts,i)=>({t:ts*1000,v:closes[i]})).filter((p):p is {t:number;v:number}=>typeof p.v==="number").slice(-180);
-    return NextResponse.json({ticker,symbol:yahooSymbol,price,previousClose,change,changePct,currency:meta.currency||"INR",exchange:exchange==="NSE"?"NSE":meta.exchangeName||exchange,marketState:meta.marketState||"CLOSED",asOf:new Date((meta.regularMarketTime||Math.floor(Date.now()/1000))*1000).toISOString(),range,interval,points,source:"Yahoo Finance development fallback"},{headers:{"Cache-Control":"no-store"}});
+    return NextResponse.json({ticker,symbol:yahooSymbol,price,previousClose,change,changePct,currency:meta.currency||"INR",exchange:exchange==="NSE"?"NSE":meta.exchangeName||exchange,marketState:meta.marketState||"CLOSED",asOf:new Date((meta.regularMarketTime||Math.floor(Date.now()/1000))*1000).toISOString(),range,interval,points,source:exchange==="BSE" ? "Yahoo Finance development fallback (BSE)" : "Yahoo Finance development fallback (NSE)"},{headers:{"Cache-Control":"no-store"}});
   }catch(error){
     return NextResponse.json({error:"Market data unavailable",detail:error instanceof Error?error.message:"Unknown provider error"},{status:502});
   }
