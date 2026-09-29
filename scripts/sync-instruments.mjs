@@ -55,23 +55,31 @@ async function main(){
     }catch(e){console.warn("NSE source unavailable:",String(e))}
   }
   try{
-    const groupData=await fetch("https://api.bseindia.com/BseIndiaAPI/api/BindDDLEQ/w?flag=Group",{headers:{...headers,"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com"}}).then(x=>x.ok?x.json():Promise.reject(new Error("BSE groups "+x.status)));
-    const groups=[...new Set((Array.isArray(groupData)?groupData:(groupData.Table||[])).map((x)=>String(x.Symbol??x.symbol??x.Group??x.group??"").trim()).filter(Boolean))];
-    if(!groups.length)throw new Error("BSE returned no security groups");
-    const seen=new Set();
-    for(const group of groups){
-      const data=await fetch(BSE_URL+"?"+new URLSearchParams({scripcode:"",Group:group,industry:"",segment:"Equity",status:"Active"}).toString(),{headers:{...headers,"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com","Accept":"application/json, text/plain, */*"}}).then(x=>x.ok?x.json():Promise.reject(new Error("BSE "+x.status)));
-      const rows=Array.isArray(data)?data:(data.Table||data.Data||[]);
-      for(const r of rows){
-        const bseCode=String(r.ScripCode??r.SecurityCode??r.scripcode??r.SCRIP_CD??"").trim();
-        const symbol=String(r.Scrip_ID??r.ScripId??r.SecurityID??r.securityid??r.scrip_id??r.SC_CODE??"").trim();
-        const name=String(r.SecurityName??r.Scrip_Name??r.scripname??r.CompanyName??r.scrip_name??r.LONG_NAME??"").trim();
-        const isin=String(r.ISIN??r.Isin??r.isin??r.ISIN_CODE??"").trim();
-        const key=bseCode||symbol||isin;
-        if(!key||seen.has(key))continue;
-        seen.add(key);
-        add(out,{symbol:symbol||bseCode,name:name||symbol||bseCode,isin,exchanges:["BSE"],assetType:"equity",series:String(r.Group??r.group??group),bseCode});
-      }
+    const bseHeaders={
+      "Host":"api.bseindia.com",
+      "Referer":"https://www.bseindia.com/corporates/ann.html",
+      "User-Agent":"Mozilla/5.0 (Windows NT 11.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.166 Safari/537.36",
+      "Sec-CH-UA":'"Google Chrome";v="134", "Chromium";v="134", "Not?A_Brand";v="99"',
+      "Sec-CH-UA-Mobile":"?0",
+      "Sec-CH-UA-Platform":'"Windows"',
+      "DNT":"1",
+      "Accept":"application/json, text/plain, */*",
+      "Accept-Language":"en-US,en;q=0.9",
+      "Cache-Control":"no-cache",
+      "Connection":"keep-alive"
+    };
+    const bseUrl=BSE_URL+"?"+new URLSearchParams({scripcode:"",Group:"",industry:"",segment:"Equity",status:"Active"}).toString();
+    const response=await fetch(bseUrl,{headers:bseHeaders});
+    if(!response.ok)throw new Error("BSE "+response.status);
+    const data=await response.json();
+    const rows=Array.isArray(data)?data:(data.Table||data.Data||[]);
+    for(const r of rows){
+      const bseCode=String(r.SCRIP_CD??r.ScripCode??r.SecurityCode??r.scripcode??"").trim();
+      const symbol=String(r.scrip_id??r.Scrip_ID??r.ScripId??r.SecurityID??"").trim();
+      const name=String(r.Scrip_Name??r.SecurityName??r.scripname??r.CompanyName??"").trim();
+      const isin=String(r.ISIN_NUMBER??r.ISIN??r.Isin??r.isin??"").trim();
+      if(!bseCode&&!symbol)continue;
+      add(out,{symbol:symbol||bseCode,name:name||symbol||bseCode,isin,exchanges:["BSE"],assetType:"equity",series:String(r.GROUP??r.Group??r.group??""),bseCode});
     }
   }catch(e){console.warn("BSE source unavailable:",String(e))}
   const items=[...out.values()].filter(x=>x.symbol||x.bseCode).sort((a,b)=>String(a.name).localeCompare(String(b.name)));
