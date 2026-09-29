@@ -3,6 +3,7 @@
 import {useEffect,useMemo,useRef,useState} from "react";
 
 type FundamentalRow={date:string;value:number};
+type Instrument={symbol:string;name:string;isin:string;exchanges:string[];assetType:string;nseSymbol?:string;bseCode?:string};
 type Fundamentals={ticker:string;symbol:string;currency:string;source:string;updatedAt:string;profile:{name:string;sector:string;industry:string;description:string};revenue:FundamentalRow[];netIncome:FundamentalRow[];eps:FundamentalRow[];freeCashFlow:FundamentalRow[];operatingCashFlow:FundamentalRow[];debt:FundamentalRow[];equity:FundamentalRow[];cash:FundamentalRow[];};
 
 const stocks=[
@@ -31,11 +32,13 @@ const latest=(rows:FundamentalRow[])=>rows?.[rows.length-1]?.value;
 const growth=(rows:FundamentalRow[])=>{if(rows?.length<2)return null;const a=rows[rows.length-2].value,b=rows[rows.length-1].value;return a?((b-a)/Math.abs(a))*100:null};
 
 export default function Home(){
- const [dark,setDark]=useState(false),[q,setQ]=useState(""),[active,setActive]=useState("Overview"),[watch,setWatch]=useState(false),[watchlist,setWatchlist]=useState<string[]>([]),[period,setPeriod]=useState("1D"),[selected,setSelected]=useState("RELIANCE");
+ const [instruments,setInstruments]=useState<Instrument[]>([]),[dark,setDark]=useState(false),[q,setQ]=useState(""),[active,setActive]=useState("Overview"),[watch,setWatch]=useState(false),[watchlist,setWatchlist]=useState<string[]>([]),[period,setPeriod]=useState("1D"),[selected,setSelected]=useState("RELIANCE");
+ useEffect(()=>{fetch("/api/instruments",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d?.items?.length)setInstruments(d.items)}).catch(()=>{})},[]);
+ const universe=instruments.length?instruments.filter(i=>i.assetType==="equity").map(i=>({t:i.symbol,n:i.name})):stocks;
  const [quotes,setQuotes]=useState<Record<string,Quote>>({}),[loading,setLoading]=useState(false),[live,setLive]=useState(false),[chartLoading,setChartLoading]=useState(false),[fundamentals,setFundamentals]=useState<Fundamentals|null>(null),[fundLoading,setFundLoading]=useState(false);
  const searchRef=useRef<HTMLInputElement>(null);
- const filtered=stocks.filter(s=>(s.t+" "+s.n).toLowerCase().includes(q.toLowerCase())).slice(0,8);
- const selectedInfo=stocks.find(s=>s.t===selected);
+ const filtered=universe.filter(s=>(s.t+" "+s.n).toLowerCase().includes(q.toLowerCase())).slice(0,8);
+ const selectedInfo=universe.find(s=>s.t===selected);
  useEffect(()=>{try{setDark(localStorage.getItem("stocklens-theme")==="dark");setWatchlist(JSON.parse(localStorage.getItem("stocklens-watchlist")||"[]"))}catch{}},[]);
  useEffect(()=>{localStorage.setItem("stocklens-theme",dark?"dark":"light")},[dark]);
  useEffect(()=>{localStorage.setItem("stocklens-watchlist",JSON.stringify(watchlist))},[watchlist]);
@@ -46,14 +49,14 @@ export default function Home(){
  const toggleWatch=()=>setWatchlist(w=>w.includes(selected)?w.filter(x=>x!==selected):[...w,selected]);
  const rangeMap:Record<string,string>={"1D":"1d","1W":"1w","1M":"1mo","1Y":"1y","5Y":"5y"};
  useEffect(()=>{let cancelled=false;if(period==="1D")return;setChartLoading(true);fetch("/api/quote?ticker="+selected+"&range="+rangeMap[period],{cache:"no-store"}).then(r=>r.ok?r.json():null).then(data=>{if(cancelled||!data?.price)return;setQuotes(prev=>({...prev,[selected]:data}))}).catch(()=>{}).finally(()=>{if(!cancelled)setChartLoading(false)});return()=>{cancelled=true}},[selected,period]);
- useEffect(()=>{let cancelled=false;const isStock=stocks.some(s=>s.t===selected);setFundLoading(isStock);setFundamentals(null);if(!isStock)return;fetch("/api/fundamentals?ticker="+selected,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(data=>{if(!cancelled&&data?.ticker)setFundamentals(data)}).catch(()=>{}).finally(()=>{if(!cancelled)setFundLoading(false)});return()=>{cancelled=true}},[selected]);
+ useEffect(()=>{let cancelled=false;const isStock=universe.some(s=>s.t===selected);setFundLoading(isStock);setFundamentals(null);if(!isStock)return;fetch("/api/fundamentals?ticker="+selected,{cache:"no-store"}).then(r=>r.ok?r.json():null).then(data=>{if(!cancelled&&data?.ticker)setFundamentals(data)}).catch(()=>{}).finally(()=>{if(!cancelled)setFundLoading(false)});return()=>{cancelled=true}},[selected]);
  const current=quotes[selected],fallback=fallbackQuotes[selected],price=current?.price??fallback?.price??0,changePct=current?.changePct??fallback?.changePct??0;
  const currentName=selectedInfo?.n??selected;
  const chartPoints=current?.points?.length?current.points.map(p=>p.v):[];
  const chartPath=useMemo(()=>{const values=chartPoints;if(values.length<2)return "M0 190 C120 155 190 175 300 130 S520 140 650 90 S800 75 900 50";const min=Math.min(...values),max=Math.max(...values),range=max-min||1;return values.map((v,i)=>(i?"L":"M")+(i/(values.length-1))*900+" "+(235-((v-min)/range)*190)).join(" ")},[chartPoints]);
  const revenue=latest(fundamentals?.revenue||[]),netIncome=latest(fundamentals?.netIncome||[]),eps=latest(fundamentals?.eps||[]),fcf=latest(fundamentals?.freeCashFlow||[]),debt=latest(fundamentals?.debt||[]),equity=latest(fundamentals?.equity||[]),cash=latest(fundamentals?.cash||[]); const pe=eps&&eps>0?price/eps:null; const debtEquity=debt!=null&&equity?debt/equity:null; const netCash=debt!=null&&cash!=null?cash-debt:null;
  const insights=active==="Overview"?[["MARKET STATUS",current?.marketState||"—","Quote state"],["DAY CHANGE",pct(changePct),"Current session"],["EXCHANGE",current?.exchange||"NSE","Quote metadata"],["DATA SOURCE",current?.source||"Fallback","Quote provenance"]]:active==="Financials"?[["REVENUE",revenue!=null?"₹ "+compact(revenue):"—",growth(fundamentals?.revenue||[])!=null?"YoY "+pct(growth(fundamentals?.revenue||[])!):"Latest annual"],["NET PROFIT",netIncome!=null?"₹ "+compact(netIncome):"—",growth(fundamentals?.netIncome||[])!=null?"YoY "+pct(growth(fundamentals?.netIncome||[])!):"Latest annual"],["EPS",eps!=null?"₹ "+eps.toFixed(2):"—",growth(fundamentals?.eps||[])!=null?"YoY "+pct(growth(fundamentals?.eps||[])!):"Latest annual"],["FREE CASH FLOW",fcf!=null?"₹ "+compact(fcf):"—","Latest annual"]]:active==="Valuation"?[["P/E",pe!=null?pe.toFixed(1)+"×":"—","Price ÷ latest annual EPS"],["P/B","—","Requires equity + share count"],["NET DEBT",netCash!=null?(netCash>=0?"Net cash ₹ ":"Net debt ₹ ")+compact(Math.abs(netCash)):"—","Cash less debt"],["EV/EBITDA","—","Enterprise-value layer next"]]:[["DEBT / EQUITY",debtEquity!=null?debtEquity.toFixed(2)+"×":"—","Latest annual balance sheet"],["OPERATING CASH",latest(fundamentals?.operatingCashFlow||[])!=null?"₹ "+compact(latest(fundamentals?.operatingCashFlow||[])!):"—","Latest annual"],["EQUITY",equity!=null?"₹ "+compact(equity):"—","Latest annual"],["KEY WATCH",fundLoading?"Updating…":"Data-backed","StockLens lens layer"]];
- const watchItems=watchlist.map(t=>({t,n:stocks.find(s=>s.t===t)?.n||t})).filter(x=>x.t!==selected);
+ const watchItems=watchlist.map(t=>({t,n:universe.find(s=>s.t===t)?.n||t})).filter(x=>x.t!==selected);
 
  return <main className={dark?"dark":""}>
  <header className="nav glass"><a className="brand" href="#top" aria-label="StockLens home"><span className="mark">S</span><span>stock<span>lens</span></span></a><nav aria-label="Primary"><a href="#market">Markets</a><a href="#discover">Discover</a><a href="#analysis">Analysis</a><a className="active" href="#analysis">Lens</a></nav><div className="nav-actions"><button className="icon" aria-label={dark?"Switch to light mode":"Switch to dark mode"} onClick={()=>setDark(!dark)}>{dark?"☀":"◐"}</button><button className="profile" aria-label="Watchlist">{watchlist.length||"HB"}</button></div></header>
