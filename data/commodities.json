@@ -1,0 +1,118 @@
+{
+  "updatedAt": "2026-09-29T00:00:00.000Z",
+  "source": "MCX product catalogue; price feed requires market-data entitlement",
+  "items": [
+    {
+      "symbol": "GOLD",
+      "name": "Gold",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Bullion"
+    },
+    {
+      "symbol": "GOLDMINI",
+      "name": "Gold Mini",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Bullion"
+    },
+    {
+      "symbol": "SILVER",
+      "name": "Silver",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Bullion"
+    },
+    {
+      "symbol": "SILVERMINI",
+      "name": "Silver Mini",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Bullion"
+    },
+    {
+      "symbol": "COPPER",
+      "name": "Copper",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Base Metals"
+    },
+    {
+      "symbol": "ALUMINIUM",
+      "name": "Aluminium",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Base Metals"
+    },
+    {
+      "symbol": "ZINC",
+      "name": "Zinc",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Base Metals"
+    },
+    {
+      "symbol": "LEAD",
+      "name": "Lead",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Base Metals"
+    },
+    {
+      "symbol": "CRUDEOIL",
+      "name": "Crude Oil",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Energy"
+    },
+    {
+      "symbol": "CRUDEOILMINI",
+      "name": "Crude Oil Mini",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Energy"
+    },
+    {
+      "symbol": "NATURALGAS",
+      "name": "Natural Gas",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Energy"
+    },
+    {
+      "symbol": "NATURALGASMINI",
+      "name": "Natural Gas Mini",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Energy"
+    },
+    {
+      "symbol": "COTTON",
+      "name": "Cotton",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Agri"
+    },
+    {
+      "symbol": "CARDAMOM",
+      "name": "Cardamom",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Agri"
+    },
+    {
+      "symbol": "MENTHAOIL",
+      "name": "Mentha Oil",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Agri"
+    },
+    {
+      "symbol": "CPO",
+      "name": "Crude Palm Oil",
+      "exchange": "MCX",
+      "assetType": "commodity",
+      "category": "Agri"
+    }
+  ]
+}
