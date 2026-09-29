@@ -2,25 +2,26 @@
   "name": "stocklens",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "bun@1.2.15",
   "scripts": {
     "dev": "next dev",
     "build": "opennextjs-cloudflare build",
     "build:next": "next build",
     "start": "next start",
     "preview": "opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare deploy"
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "@opennextjs/cloudflare": "latest"
+    "next": "16.3.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "@opennextjs/cloudflare": "1.20.7"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "wrangler": "latest"
+    "typescript": "7.0.2",
+    "@types/node": "26.6.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "wrangler": "4.143.0"
   }
 }
