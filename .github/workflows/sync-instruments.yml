@@ -1,5 +1,8 @@
 name: Sync StockLens instrument master
 on:
+  push:
+    paths:
+      - "scripts/sync-instruments.mjs"
   schedule:
     - cron: "30 0 * * *"
   workflow_dispatch:
