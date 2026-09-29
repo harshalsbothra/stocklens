@@ -1,0 +1,2 @@
+import {NextResponse} from "next/server"; import commodities from "@/data/commodities.json";
+export async function GET(){return NextResponse.json(commodities,{headers:{"Cache-Control":"public, s-maxage=3600, stale-while-revalidate=86400"}})}
