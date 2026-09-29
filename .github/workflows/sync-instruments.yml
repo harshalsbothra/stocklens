@@ -1,0 +1,25 @@
+name: Sync StockLens instrument master
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.15
+      - name: Sync NSE and BSE masters
+        run: bun scripts/sync-instruments.mjs
+      - name: Commit updated master
+        run: |
+          git config user.name "StockLens Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/instruments.json
+          git diff --cached --quiet && echo "No instrument changes" && exit 0
+          git commit -m "Sync NSE and BSE instrument master"
+          git push
