@@ -1,6 +1,5 @@
 import {NextResponse} from "next/server";
 import {getDb} from "../../../lib/db";
-import instruments from "../../../data/instruments.json";
 
 export async function GET(){
   try {
@@ -11,9 +10,6 @@ export async function GET(){
       {headers:{"Cache-Control":"public, s-maxage=3600, stale-while-revalidate=86400"}}
     );
   } catch {
-    return NextResponse.json(
-      {updatedAt:instruments.updatedAt,source:"Seed fallback — Neon unavailable",count:instruments.items.length,items:instruments.items},
-      {headers:{"Cache-Control":"public, s-maxage=300, stale-while-revalidate=3600"}}
-    );
+    return NextResponse.json({error:"Instrument master unavailable"},{status:503});
   }
 }
