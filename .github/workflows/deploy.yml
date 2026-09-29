@@ -13,19 +13,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
       - name: Install dependencies
         run: npm install --legacy-peer-deps --no-audit --no-fund
-
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
+      - name: Build and deploy
         run: npm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
