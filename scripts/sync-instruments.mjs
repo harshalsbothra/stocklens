@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import { neon } from "@neondatabase/serverless";
 const NSE_URL="https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv";
 const NSE_SME_URL="https://nsearchives.nseindia.com/content/equities/EQUITY_SME.csv";
 const BSE_URL="https://api.bseindia.com/BseIndiaAPI/api/ListofScripData/w";
@@ -68,6 +69,22 @@ async function main(){
   if(items.length<100)throw new Error("Exchange sync produced too few instruments ("+items.length+"); refusing to overwrite the master.");
   await fs.mkdir("data",{recursive:true});
   await fs.writeFile("data/instruments.json",JSON.stringify({updatedAt:new Date().toISOString(),source:"NSE/BSE exchange security masters",count:items.length,items},null,2)+"\n");
-  console.log("Synced",items.length,"instruments")
+  console.log("Synced",items.length,"instruments to exchange master");
+  if(process.env.DATABASE_URL){
+    const sql=neon(process.env.DATABASE_URL);
+    await sql`CREATE TEMP TABLE stocklens_instrument_stage (LIKE instruments INCLUDING DEFAULTS) ON COMMIT DROP`;
+    for(const item of items){
+      const exchange=item.exchanges?.[0]||"NSE";
+      const symbol=item.symbol||item.bseCode;
+      await sql`INSERT INTO stocklens_instrument_stage (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code) VALUES (${item.isin||null},${symbol},${exchange},${item.assetType||"equity"},${item.series||null},${item.name||symbol},${exchange==="NSE"?"INR":"INR"},true,"NSE/BSE exchange security master",now(),${item.nseSymbol||null},${item.bseCode||null})`;
+    }
+    await sql`INSERT INTO instruments (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code) SELECT isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code FROM stocklens_instrument_stage s ON CONFLICT (id) DO NOTHING`;
+    for(const item of items){
+      const exchange=item.exchanges?.[0]||"NSE"; const symbol=item.symbol||item.bseCode;
+      await sql`UPDATE instruments SET isin=${item.isin||null},asset_type=${item.assetType||"equity"},series=${item.series||null},company_name=${item.name||symbol},currency="INR",active=true,source="NSE/BSE exchange security master",source_updated_at=now(),nse_symbol=${item.nseSymbol||null},bse_code=${item.bseCode||null},updated_at=now() WHERE exchange=${exchange} AND symbol=${symbol}`;
+      await sql`INSERT INTO instruments (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code) SELECT ${item.isin||null},${symbol},${exchange},${item.assetType||"equity"},${item.series||null},${item.name||symbol},"INR",true,"NSE/BSE exchange security master",now(),${item.nseSymbol||null},${item.bseCode||null} WHERE NOT EXISTS (SELECT 1 FROM instruments WHERE exchange=${exchange} AND symbol=${symbol})`;
+    }
+    console.log("Neon instrument master updated");
+  } else console.warn("DATABASE_URL not configured; Neon sync skipped")
 }
 main().catch(e=>{console.error(e);process.exit(1)})
