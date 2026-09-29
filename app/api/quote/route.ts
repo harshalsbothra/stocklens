@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   const range = params.get("range") || "1d";
   const intervalByRange: Record<string,string> = { "1d":"5m", "1w":"30m", "1mo":"1h", "1y":"1d", "5y":"1wk" };
   const interval = intervalByRange[range] || "5m";
-  const symbol = symbols[ticker] || (ticker.endsWith(".NS") || ticker.startsWith("^") ? ticker : null);
+  const symbol = symbols[ticker] || (ticker.endsWith(".NS") || ticker.startsWith("^") ? ticker : /^[A-Z0-9&-]{1,30}$/.test(ticker) ? `${ticker}.NS` : null);
   if (!symbol) return NextResponse.json({ error:"Unsupported ticker" }, { status:400 });
 
   try {
