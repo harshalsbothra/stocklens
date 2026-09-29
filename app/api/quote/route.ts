@@ -53,12 +53,19 @@ export async function GET(request:Request){
   try{
     if(!symbol){
       const sql=getDb();
-      const rows=await sql`SELECT symbol,nse_symbol AS "nseSymbol",bse_code AS "bseCode",exchange FROM instruments WHERE active=true AND upper(symbol)=${ticker} ORDER BY CASE WHEN exchange='NSE' THEN 0 ELSE 1 END LIMIT 2`;
+      const rows=await sql`SELECT symbol,nse_symbol AS "nseSymbol",bse_code AS "bseCode",exchange FROM instruments WHERE active=true AND upper(symbol)=${ticker} ORDER BY CASE WHEN exchange='NSE' THEN 0 WHEN exchange='BSE' THEN 1 ELSE 2 END LIMIT 2`;
       const instrument=rows[0];
-      if(!instrument)return NextResponse.json({error:"Instrument not found in StockLens master"},{status:404});
-      exchange=String(instrument.exchange||"NSE").toUpperCase();
-      if(exchange==="BSE")symbol=String(instrument.bseCode||instrument.symbol);
-      else symbol=String(instrument.nseSymbol||instrument.symbol);
+      if(instrument){
+        exchange=String(instrument.exchange||"NSE").toUpperCase();
+        if(exchange==="BSE")symbol=String(instrument.bseCode||instrument.symbol);
+        else symbol=String(instrument.nseSymbol||instrument.symbol);
+      } else {
+        const commodities=await sql`SELECT symbol,exchange FROM commodities WHERE active=true AND upper(symbol)=${ticker} LIMIT 1`;
+        const commodity=commodities[0];
+        if(!commodity)return NextResponse.json({error:"Instrument or MCX contract not found in StockLens master"},{status:404});
+        exchange=String(commodity.exchange||"MCX").toUpperCase();
+        symbol=String(commodity.symbol);
+      }
     } else if(ticker==="SENSEX") exchange="BSE";
 
     const licensed=await fetchLicensedFeed(exchange,ticker,range,interval);
@@ -66,9 +73,9 @@ export async function GET(request:Request){
 
     // Development fallback only. Production StockLens should set the exchange-specific
     // licensed feed URL/token so exchange data is not sourced from Yahoo.
-    if(exchange==="BSE")return NextResponse.json({error:"BSE licensed market-data feed is not configured"},{status:503});
+    if(exchange==="BSE" || exchange==="MCX")return NextResponse.json({error:`${exchange} licensed market-data feed is not configured`},{status:503});
 
-    const yahooSymbol=exchange==="NSE"?(`${symbol}.NS`):symbol;
+    const yahooSymbol=`${symbol}.NS`;
     const url=new URL(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol)}`);
     url.searchParams.set("range",range); url.searchParams.set("interval",interval); url.searchParams.set("includePrePost","true");
     const response=await fetch(url,{cache:"no-store",headers:{"User-Agent":"StockLens/1.0"}});
