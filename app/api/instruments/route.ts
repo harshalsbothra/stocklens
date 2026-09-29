@@ -1,6 +1,6 @@
 import {NextResponse} from "next/server";
 import {getDb} from "@/lib/db";
-import instruments from "@/data/instruments.json";
+import instruments from "../../../data/instruments.json";
 
 export async function GET(){
   try {
