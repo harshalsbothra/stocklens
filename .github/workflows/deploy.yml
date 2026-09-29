@@ -1,4 +1,5 @@
 name: Deploy StockLens to Cloudflare
+# Production pipeline: sync exchange master, build, then deploy.
 
 on:
   push:
