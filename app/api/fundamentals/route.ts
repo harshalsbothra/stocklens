@@ -1,5 +1,5 @@
 import {NextResponse} from "next/server";
-import {getDb} from "@/lib/db";
+import {getDb} from "../../../lib/db";
 
 const groups={revenue:"annualTotalRevenue",netIncome:"annualNetIncome",eps:"annualDilutedEPS",freeCashFlow:"annualFreeCashFlow",operatingCashFlow:"annualOperatingCashFlow",debt:"annualTotalDebt",equity:"annualStockholdersEquity",cash:"annualCashCashEquivalentsAndShortTermInvestments"};
 type Row={date:string;value:number};
