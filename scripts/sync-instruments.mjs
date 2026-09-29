@@ -103,7 +103,7 @@ async function main(){
     for(let i=0;i<rows.length;i+=100){
       const batch=rows.slice(i,i+100);
       await sql.transaction(batch.map(item=>sql`INSERT INTO instruments (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code)
-        VALUES (${item.isin},${item.symbol},${item.exchange},${item.assetType},${item.series},${item.name},"INR",true,"NSE/BSE exchange security master",now(),${item.nseSymbol},${item.bseCode})
+        VALUES (${item.isin},${item.symbol},${item.exchange},${item.assetType},${item.series},${item.name},${"INR"},true,${"NSE/BSE exchange security master"},now(),${item.nseSymbol},${item.bseCode})
         ON CONFLICT (exchange,symbol) DO UPDATE SET
           isin=excluded.isin,asset_type=excluded.asset_type,series=excluded.series,company_name=excluded.company_name,currency=excluded.currency,active=true,source=excluded.source,source_updated_at=excluded.source_updated_at,nse_symbol=excluded.nse_symbol,bse_code=excluded.bse_code,updated_at=now()`));
     }
