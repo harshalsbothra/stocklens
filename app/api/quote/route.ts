@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import {getDb} from "@/lib/db";
+import {getDb} from "../../../lib/db";
 
 const indices:Record<string,string>={NIFTY:"^NSEI",SENSEX:"^BSESN",BANKNIFTY:"^NSEBANK"};
 const ranges:Record<string,string>={"1d":"5m","1w":"30m","1mo":"1h","1y":"1d","5y":"1wk"};
