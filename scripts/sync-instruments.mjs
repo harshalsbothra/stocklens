@@ -32,9 +32,10 @@ async function get(url,options={}){
 
 function add(map,item){
   if(!item.symbol&&!item.bseCode)return;
-  const key=item.isin||((item.exchanges||[])[0]+":"+item.symbol);
+  const exchange=item.exchanges?.[0]||"NSE";
+  const key=exchange+":"+String(item.symbol||item.bseCode);
   const old=map.get(key);
-  map.set(key,old?{...old,...item,symbol:old.symbol||item.symbol,name:old.name||item.name,isin:old.isin||item.isin,exchanges:[...new Set([...(old.exchanges||[]),...(item.exchanges||[])])]}:item)
+  map.set(key,old?{...old,...item,isin:old.isin||item.isin,name:old.name||item.name}:item);
 }
 
 async function main(){
@@ -54,15 +55,22 @@ async function main(){
     }catch(e){console.warn("NSE source unavailable:",String(e))}
   }
   try{
-    const r=await get(BSE_URL,{headers:{"Referer":"https://www.bseindia.com/markets/equity/EQReports/List_Scrips.aspx","Origin":"https://www.bseindia.com"}});
-    const data=await r.json();
-    const rows=Array.isArray(data)?data:(data.Table||data.Data||[]);
-    for(const r of rows){
-      const bseCode=String(r.SecurityCode??r.ScripCode??r.scripcode??"").trim();
-      const symbol=String(r.Scrip_ID??r.scrip_id??r.SecurityID??r.securityid??"").trim();
-      const name=String(r.SecurityName??r.Scrip_Name??r.scripname??r.CompanyName??"").trim();
-      const isin=String(r.ISIN??r.Isin??r.isin??"").trim();
-      add(out,{symbol:symbol||bseCode,name:name||symbol||bseCode,isin,exchanges:["BSE"],assetType:"equity",bseCode})
+    const groups=["A","B","E","F","FC","GC","T","X","XT","Z","ZP","MT","TS","IT","R","G","S","C","D","P","Q"];
+    const seen=new Set();
+    for(const group of groups){
+      const r=await get(BSE_URL,{headers:{"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com"}});
+      const data=await fetch(BSE_URL+"?"+new URLSearchParams({scripcode:"",Group:group,industry:"",segment:"Equity",status:"Active"}).toString(),{headers:{...headers,"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com","Accept":"application/json, text/plain, */*"}}).then(x=>x.ok?x.json():Promise.reject(new Error("BSE "+x.status)));
+      const rows=Array.isArray(data)?data:(data.Table||data.Data||[]);
+      for(const r of rows){
+        const bseCode=String(r.ScripCode??r.SecurityCode??r.scripcode??r.SCRIP_CD??"").trim();
+        const symbol=String(r.Scrip_ID??r.ScripId??r.SecurityID??r.securityid??r.scrip_id??r.SC_CODE??"").trim();
+        const name=String(r.SecurityName??r.Scrip_Name??r.scripname??r.CompanyName??r.scrip_name??r.LONG_NAME??"").trim();
+        const isin=String(r.ISIN??r.Isin??r.isin??r.ISIN_CODE??"").trim();
+        const key=bseCode||symbol||isin;
+        if(!key||seen.has(key))continue;
+        seen.add(key);
+        add(out,{symbol:symbol||bseCode,name:name||symbol||bseCode,isin,exchanges:["BSE"],assetType:"equity",series:String(r.Group??r.group??group),bseCode});
+      }
     }
   }catch(e){console.warn("BSE source unavailable:",String(e))}
   const items=[...out.values()].filter(x=>x.symbol||x.bseCode).sort((a,b)=>String(a.name).localeCompare(String(b.name)));
@@ -72,19 +80,20 @@ async function main(){
   console.log("Synced",items.length,"instruments to exchange master");
   if(process.env.DATABASE_URL){
     const sql=neon(process.env.DATABASE_URL);
-    await sql`CREATE TEMP TABLE stocklens_instrument_stage (LIKE instruments INCLUDING DEFAULTS) ON COMMIT DROP`;
-    for(const item of items){
-      const exchange=item.exchanges?.[0]||"NSE";
-      const symbol=item.symbol||item.bseCode;
-      await sql`INSERT INTO stocklens_instrument_stage (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code) VALUES (${item.isin||null},${symbol},${exchange},${item.assetType||"equity"},${item.series||null},${item.name||symbol},${exchange==="NSE"?"INR":"INR"},true,"NSE/BSE exchange security master",now(),${item.nseSymbol||null},${item.bseCode||null})`;
+    await sql`UPDATE instruments SET active=false, updated_at=now() WHERE exchange IN ('NSE','BSE') AND asset_type IN ('equity','sme')`;
+    const rows=items.map(item=>({
+      isin:item.isin||null,symbol:item.symbol||item.bseCode,exchange:item.exchanges?.[0]||"NSE",
+      assetType:item.assetType||"equity",series:item.series||null,name:item.name||item.symbol||item.bseCode,
+      nseSymbol:item.nseSymbol||null,bseCode:item.bseCode||null
+    }));
+    for(let i=0;i<rows.length;i+=100){
+      const batch=rows.slice(i,i+100);
+      await sql.transaction(batch.map(item=>sql`INSERT INTO instruments (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code)
+        VALUES (${item.isin},${item.symbol},${item.exchange},${item.assetType},${item.series},${item.name},"INR",true,"NSE/BSE exchange security master",now(),${item.nseSymbol},${item.bseCode})
+        ON CONFLICT (exchange,symbol) DO UPDATE SET
+          isin=excluded.isin,asset_type=excluded.asset_type,series=excluded.series,company_name=excluded.company_name,currency=excluded.currency,active=true,source=excluded.source,source_updated_at=excluded.source_updated_at,nse_symbol=excluded.nse_symbol,bse_code=excluded.bse_code,updated_at=now()`));
     }
-    await sql`INSERT INTO instruments (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code) SELECT isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code FROM stocklens_instrument_stage s ON CONFLICT (id) DO NOTHING`;
-    for(const item of items){
-      const exchange=item.exchanges?.[0]||"NSE"; const symbol=item.symbol||item.bseCode;
-      await sql`UPDATE instruments SET isin=${item.isin||null},asset_type=${item.assetType||"equity"},series=${item.series||null},company_name=${item.name||symbol},currency="INR",active=true,source="NSE/BSE exchange security master",source_updated_at=now(),nse_symbol=${item.nseSymbol||null},bse_code=${item.bseCode||null},updated_at=now() WHERE exchange=${exchange} AND symbol=${symbol}`;
-      await sql`INSERT INTO instruments (isin,symbol,exchange,asset_type,series,company_name,currency,active,source,source_updated_at,nse_symbol,bse_code) SELECT ${item.isin||null},${symbol},${exchange},${item.assetType||"equity"},${item.series||null},${item.name||symbol},"INR",true,"NSE/BSE exchange security master",now(),${item.nseSymbol||null},${item.bseCode||null} WHERE NOT EXISTS (SELECT 1 FROM instruments WHERE exchange=${exchange} AND symbol=${symbol})`;
-    }
-    console.log("Neon instrument master updated");
+    console.log("Neon instrument master updated:",rows.length);
   } else console.warn("DATABASE_URL not configured; Neon sync skipped")
 }
 main().catch(e=>{console.error(e);process.exit(1)})
