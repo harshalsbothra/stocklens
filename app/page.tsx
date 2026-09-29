@@ -34,7 +34,7 @@ const growth=(rows:FundamentalRow[])=>{if(rows?.length<2)return null;const a=row
 export default function Home(){
  const [instruments,setInstruments]=useState<Instrument[]>([]),[dark,setDark]=useState(false),[q,setQ]=useState(""),[active,setActive]=useState("Overview"),[watch,setWatch]=useState(false),[watchlist,setWatchlist]=useState<string[]>([]),[period,setPeriod]=useState("1D"),[selected,setSelected]=useState("RELIANCE");
  useEffect(()=>{fetch("/api/instruments",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(d=>{if(d?.items?.length)setInstruments(d.items)}).catch(()=>{})},[]);
- const universe=instruments.length?instruments.filter(i=>i.assetType==="equity").map(i=>({t:i.symbol,n:i.name})):stocks;
+ const universe=instruments.length?instruments.filter(i=>i.assetType==="equity"||i.assetType==="sme").map(i=>({t:i.symbol,n:i.name})):stocks;
  const [quotes,setQuotes]=useState<Record<string,Quote>>({}),[loading,setLoading]=useState(false),[live,setLive]=useState(false),[chartLoading,setChartLoading]=useState(false),[fundamentals,setFundamentals]=useState<Fundamentals|null>(null),[fundLoading,setFundLoading]=useState(false);
  const searchRef=useRef<HTMLInputElement>(null);
  const filtered=universe.filter(s=>(s.t+" "+s.n).toLowerCase().includes(q.toLowerCase())).slice(0,8);
