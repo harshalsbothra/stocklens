@@ -55,10 +55,11 @@ async function main(){
     }catch(e){console.warn("NSE source unavailable:",String(e))}
   }
   try{
-    const groups=["A","B","E","F","FC","GC","T","X","XT","Z","ZP","MT","TS","IT","R","G","S","C","D","P","Q"];
+    const groupData=await fetch("https://api.bseindia.com/BseIndiaAPI/api/BindDDLEQ/w?flag=Group",{headers:{...headers,"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com"}}).then(x=>x.ok?x.json():Promise.reject(new Error("BSE groups "+x.status)));
+    const groups=[...new Set((Array.isArray(groupData)?groupData:(groupData.Table||[])).map((x)=>String(x.Symbol??x.symbol??x.Group??x.group??"").trim()).filter(Boolean))];
+    if(!groups.length)throw new Error("BSE returned no security groups");
     const seen=new Set();
     for(const group of groups){
-      const r=await get(BSE_URL,{headers:{"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com"}});
       const data=await fetch(BSE_URL+"?"+new URLSearchParams({scripcode:"",Group:group,industry:"",segment:"Equity",status:"Active"}).toString(),{headers:{...headers,"Host":"api.bseindia.com","Referer":"https://www.bseindia.com/corporates/ann.html","Origin":"https://www.bseindia.com","Accept":"application/json, text/plain, */*"}}).then(x=>x.ok?x.json():Promise.reject(new Error("BSE "+x.status)));
       const rows=Array.isArray(data)?data:(data.Table||data.Data||[]);
       for(const r of rows){
@@ -74,7 +75,9 @@ async function main(){
     }
   }catch(e){console.warn("BSE source unavailable:",String(e))}
   const items=[...out.values()].filter(x=>x.symbol||x.bseCode).sort((a,b)=>String(a.name).localeCompare(String(b.name)));
-  if(items.length<100)throw new Error("Exchange sync produced too few instruments ("+items.length+"); refusing to overwrite the master.");
+  const nseCount=items.filter(x=>x.exchanges?.includes("NSE")).length;
+  const bseCount=items.filter(x=>x.exchanges?.includes("BSE")).length;
+  if(nseCount<1000||bseCount<1000)throw new Error("Exchange sync produced too few instruments (NSE="+nseCount+", BSE="+bseCount+"); refusing to overwrite the master.");
   await fs.mkdir("data",{recursive:true});
   await fs.writeFile("data/instruments.json",JSON.stringify({updatedAt:new Date().toISOString(),source:"NSE/BSE exchange security masters",count:items.length,items},null,2)+"\n");
   console.log("Synced",items.length,"instruments to exchange master");
