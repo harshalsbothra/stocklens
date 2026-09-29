@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import { neon } from "@neondatabase/serverless";
 const NSE_URL="https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv";
-const NSE_SME_URL="https://nsearchives.nseindia.com/content/equities/EQUITY_SME.csv";
+const NSE_SME_URL="https://nsearchives.nseindia.com/emerge/corporates/content/SME_EQUITY_L.csv";
 const BSE_URL="https://api.bseindia.com/BseIndiaAPI/api/ListofScripData/w";
 const headers={"User-Agent":"Mozilla/5.0 StockLens/1.0","Accept":"text/csv,application/json,text/plain,*/*","Referer":"https://www.nseindia.com/"};
 
@@ -85,13 +85,14 @@ async function main(){
   const items=[...out.values()].filter(x=>x.symbol||x.bseCode).sort((a,b)=>String(a.name).localeCompare(String(b.name)));
   const nseCount=items.filter(x=>x.exchanges?.includes("NSE")).length;
   const bseCount=items.filter(x=>x.exchanges?.includes("BSE")).length;
-  if(nseCount<1000||bseCount<1000)throw new Error("Exchange sync produced too few instruments (NSE="+nseCount+", BSE="+bseCount+"); refusing to overwrite the master.");
+  if(nseCount<1000)throw new Error("Exchange sync produced too few NSE instruments ("+nseCount+"); refusing to overwrite the master.");
+  if(bseCount<1000)console.warn("BSE master unavailable from current network (BSE="+bseCount+"). NSE will still be synchronized; existing BSE rows will be preserved.");
   await fs.mkdir("data",{recursive:true});
   await fs.writeFile("data/instruments.json",JSON.stringify({updatedAt:new Date().toISOString(),source:"NSE/BSE exchange security masters",count:items.length,items},null,2)+"\n");
   console.log("Synced",items.length,"instruments to exchange master");
   if(process.env.DATABASE_URL){
     const sql=neon(process.env.DATABASE_URL);
-    await sql`UPDATE instruments SET active=false, updated_at=now() WHERE exchange IN ('NSE','BSE') AND asset_type IN ('equity','sme')`;
+    await sql`UPDATE instruments SET active=false, updated_at=now() WHERE exchange='NSE' AND asset_type IN ('equity','sme')`;
     const rows=items.map(item=>({
       isin:item.isin||null,symbol:item.symbol||item.bseCode,exchange:item.exchanges?.[0]||"NSE",
       assetType:item.assetType||"equity",series:item.series||null,name:item.name||item.symbol||item.bseCode,
