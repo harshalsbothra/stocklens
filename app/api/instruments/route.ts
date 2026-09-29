@@ -13,3 +13,4 @@ export async function GET(){
     return NextResponse.json({error:"Instrument master unavailable"},{status:503});
   }
 }
+
