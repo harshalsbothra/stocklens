@@ -91,7 +91,9 @@ async function main(){
   await fs.writeFile("data/instruments.json",JSON.stringify({updatedAt:new Date().toISOString(),source:"NSE/BSE exchange security masters",count:items.length,items},null,2)+"\n");
   console.log("Synced",items.length,"instruments to exchange master");
   if(process.env.DATABASE_URL){
-    const sql=neon(process.env.DATABASE_URL);
+    const databaseUrl=(process.env.DATABASE_URL||"").trim().replace(/^DATABASE_URL\s*=\s*/i,"").replace(/^["\']|["\']$/g,"");
+    if(!/^postgres(?:ql)?:\/\//i.test(databaseUrl)) throw new Error("DATABASE_URL must be a PostgreSQL URL beginning with postgresql://");
+    const sql=neon(databaseUrl);
     await sql`UPDATE instruments SET active=false, updated_at=now() WHERE exchange='NSE' AND asset_type IN ('equity','sme')`;
     const rows=items.map(item=>({
       isin:item.isin||null,symbol:item.symbol||item.bseCode,exchange:item.exchanges?.[0]||"NSE",
