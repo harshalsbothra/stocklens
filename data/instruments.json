@@ -1,0 +1,55 @@
+{
+  "updatedAt": "2026-09-29T00:00:00.000Z",
+  "source": "StockLens seed; automated NSE/BSE master sync enabled",
+  "count": 4,
+  "items": [
+    {
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries",
+      "isin": "INE002A01018",
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "assetType": "equity",
+      "nseSymbol": "RELIANCE",
+      "bseCode": "500325"
+    },
+    {
+      "symbol": "TCS",
+      "name": "Tata Consultancy Services",
+      "isin": "INE467B01029",
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "assetType": "equity",
+      "nseSymbol": "TCS",
+      "bseCode": "532540"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "name": "HDFC Bank",
+      "isin": "INE040A01034",
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "assetType": "equity",
+      "nseSymbol": "HDFCBANK",
+      "bseCode": "500180"
+    },
+    {
+      "symbol": "INFY",
+      "name": "Infosys",
+      "isin": "INE009A01021",
+      "exchanges": [
+        "NSE",
+        "BSE"
+      ],
+      "assetType": "equity",
+      "nseSymbol": "INFY",
+      "bseCode": "500209"
+    }
+  ]
+}
