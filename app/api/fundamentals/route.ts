@@ -25,7 +25,8 @@ export async function GET(request:Request){
     const rowsDb=await sql`SELECT symbol,nse_symbol AS "nseSymbol",exchange,company_name AS "name",sector,industry FROM instruments WHERE active=true AND upper(symbol)=${ticker} LIMIT 2`;
     const instrument=rowsDb.find((r:any)=>r.nseSymbol||r.exchange==="NSE");
     if(!instrument)return NextResponse.json({error:"Instrument not found in StockLens master"},{status:404});
-    const baseSymbol=String(instrument.nseSymbol||instrument.symbol);\n    const symbol=/\\.NS$/i.test(baseSymbol)?baseSymbol:`${baseSymbol}.NS`;
+    const baseSymbol=String(instrument.nseSymbol||instrument.symbol);
+    const symbol=/\.NS$/i.test(baseSymbol)?baseSymbol:`${baseSymbol}.NS`;
     const data=await getSeries(symbol);
     const out:any={ticker,symbol,currency:"INR",source:"Yahoo Finance fundamentals time series",updatedAt:new Date().toISOString(),profile:{name:instrument.name||ticker,sector:instrument.sector||"",industry:instrument.industry||"",description:""},revenue:[],netIncome:[],eps:[],freeCashFlow:[],operatingCashFlow:[],debt:[],equity:[],cash:[]};
     for(const [name,key] of Object.entries(groups))out[name]=rows(data,key);
