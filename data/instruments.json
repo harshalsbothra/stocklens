@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-29T20:32:02.722Z",
+  "updatedAt": "2026-09-30T00:46:31.047Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3160,
+  "count": 3165,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -816,6 +816,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "ADOR"
+    },
+    {
+      "symbol": "ADROITIND",
+      "name": "Adroit Industries (India) Limited",
+      "isin": "INE505M01015",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "ADROITIND"
     },
     {
       "symbol": "ADROITINFO",
@@ -2620,6 +2631,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "ARMANFIN"
+    },
+    {
+      "symbol": "ARMEE",
+      "name": "ArMee Infotech Limited",
+      "isin": "INE0TWE01016",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "ARMEE"
     },
     {
       "symbol": "ARMOUR",
@@ -8903,6 +8925,17 @@
       "nseSymbol": "ELGNZ"
     },
     {
+      "symbol": "ELEVATE",
+      "name": "Elevate Campuses Limited",
+      "isin": "INE147X01013",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "ELEVATE"
+    },
+    {
       "symbol": "ELGIEQUIP",
       "name": "Elgi Equipments Limited",
       "isin": "INE285A01027",
@@ -11706,6 +11739,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "GSPCROP"
+    },
+    {
+      "symbol": "GSPLTRANS",
+      "name": "GSPL Transmission Limited",
+      "isin": "INE1TUG01013",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "GSPLTRANS"
     },
     {
       "symbol": "GSS",
@@ -29858,6 +29902,17 @@
       "nseSymbol": "SWASTIK"
     },
     {
+      "symbol": "SWASTIKAIN",
+      "name": "Swastika Infra Limited",
+      "isin": "INE1QJA01015",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "SWASTIKAIN"
+    },
+    {
       "symbol": "SWELECTES",
       "name": "Swelect Energy Systems Limited",
       "isin": "INE409B01013",
@@ -31097,7 +31152,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "UGARSUGAR"
     },
     {
