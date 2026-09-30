@@ -17,7 +17,8 @@
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "@opennextjs/cloudflare": "1.20.7",
-    "@neondatabase/serverless": "1.1.0"
+    "@neondatabase/serverless": "1.1.0",
+    "framer-motion": "^12.23.24"
   },
   "devDependencies": {
     "typescript": "7.0.2",
