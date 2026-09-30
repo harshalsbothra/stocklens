@@ -1,0 +1,2 @@
+import type {Config} from "tailwindcss";
+const config:Config={content:["./app/**/*.{ts,tsx}","./components/**/*.{ts,tsx}"],theme:{extend:{colors:{canvas:"#FDFBF7",card:"#FFFFFF",texture:"#F2EFE9",espresso:"#3E2723",matcha:"#829E7A",berry:"#D98A7B",wood:"#D4C1A5",roastery:"#1A1614",charcoal:"#26211F",milk:"#EAE0D5"},fontFamily:{serif:["Playfair Display","Georgia","serif"],mono:["Courier Prime","monospace"],hand:["Caveat","cursive"]},boxShadow:{cozy:"0 8px 30px rgba(62, 39, 35, 0.06)"}},plugins:[]}};export default config;
