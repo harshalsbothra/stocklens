@@ -1,0 +1,3 @@
+"use client";
+import {motion} from "framer-motion";
+export default function PinterestPolaroid({title,meta,children,rotation=0}:{title:string;meta:string;children:React.ReactNode;rotation?:number}){return <motion.article className="polaroid" initial={{rotate:rotation}} whileHover={{rotate:0,scale:1.03,zIndex:10,y:-5}} transition={{type:"spring",stiffness:120,damping:20}}><div className="washi-tape"/><div className="polaroid-photo">{children}</div><div className="polaroid-caption"><strong>{title}</strong><small>{meta}</small></div></motion.article>}
