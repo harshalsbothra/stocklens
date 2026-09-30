@@ -4,14 +4,14 @@ type Point={t:number;v:number};
 const fmt=(n:number)=>n.toLocaleString("en-IN",{maximumFractionDigits:2});
 const shortDate=(t:number)=>new Date(t).toLocaleDateString("en-IN",{day:"2-digit",month:"short"});
 export default function CafeChart({points,positive}:{points:Point[];positive:boolean}){
- const vals=points.length>1?points.map(p=>p.v):(positive?[1,1.04,1.02,1.08,1.06,1.12,1.1,1.18]:[1.18,1.12,1.15,1.06,1.08,1.02,1.04,1]);
- const chartPoints=points.length>1?points:vals.map((v,i)=>({t:Date.now()-(vals.length-1-i)*86400000,v}));
  const [hover,setHover]=useState<number|null>(null);
+ if(points.length<2)return <div className="price-trail price-trail-empty"><div className="trail-empty-state"><span>PRICE TRAIL</span><b>Historical points are not available yet.</b><small>Once the market-data provider returns timestamped prices, the trail will appear here. No placeholder prices are shown.</small></div></div>;
+ const vals=points.map(p=>p.v);
  const min=Math.min(...vals),max=Math.max(...vals),range=max-min||Math.max(Math.abs(max)*.02,1),pad=range*.12,lo=min-pad,hi=max+pad;
- const xy=chartPoints.map((p,i)=>({x:(i/(chartPoints.length-1))*100,y:88-((p.v-lo)/(hi-lo))*72}));
+ const xy=points.map((p,i)=>({x:(i/(points.length-1))*100,y:88-((p.v-lo)/(hi-lo))*72}));
  const d=xy.map((p,i)=>(i?"L":"M")+p.x.toFixed(2)+","+p.y.toFixed(2)).join(" ");
- const first=chartPoints[0]?.v??0,last=chartPoints.at(-1)?.v??0,delta=first?((last-first)/Math.abs(first))*100:0;
- const high=Math.max(...vals),low=Math.min(...vals),active=hover==null?chartPoints.length-1:hover,ap=chartPoints[active],pos=xy[active],yTicks=[hi,(hi+lo)/2,lo];
+ const first=points[0].v,last=points.at(-1)!.v,delta=first?((last-first)/Math.abs(first))*100:0;
+ const high=Math.max(...vals),low=Math.min(...vals),active=hover==null?points.length-1:hover,ap=points[active],pos=xy[active],yTicks=[hi,(hi+lo)/2,lo];
  return <div className={"price-trail "+(positive?"trail-positive":"trail-negative")}>
   <div className="trail-stats"><div><span>NOW</span><b>{fmt(last)}</b></div><div><span>TRAIL</span><b className={delta>=0?"matcha":"berry"}>{delta>=0?"+":""}{delta.toFixed(2)}%</b></div><div><span>HIGH</span><b>{fmt(high)}</b></div><div><span>LOW</span><b>{fmt(low)}</b></div></div>
   <div className="trail-plot" onMouseLeave={()=>setHover(null)}>
@@ -24,6 +24,6 @@ export default function CafeChart({points,positive}:{points:Point[];positive:boo
    </svg>
    {ap&&pos&&<div className="trail-tooltip" style={{left:pos.x+"%",top:Math.max(5,pos.y)+"%"}}><b>₹{fmt(ap.v)}</b><span>{shortDate(ap.t)}</span></div>}
   </div>
-  <div className="trail-footer"><span>{shortDate(chartPoints[0].t)}</span><span>{hover!=null?"Hover the dots to inspect a quote":"Move across the trail to inspect price"}</span><span>{shortDate(chartPoints.at(-1)!.t)}</span></div>
+  <div className="trail-footer"><span>{shortDate(points[0].t)}</span><span>{hover!=null?"Hover the dots to inspect a quote":"Move across the trail to inspect price"}</span><span>{shortDate(points.at(-1)!.t)}</span></div>
  </div>;
 }
