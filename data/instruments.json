@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-30T00:46:31.047Z",
+  "updatedAt": "2026-10-01T00:48:11.716Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3165,
+  "count": 3168,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -134,6 +134,17 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "AGUL"
+    },
+    {
+      "symbol": "AONESTEELS",
+      "name": "A-One Steels India Limited",
+      "isin": "INE0OTC01025",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "AONESTEELS"
     },
     {
       "symbol": "A2ZINFRA",
@@ -836,7 +847,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ADROITINFO"
     },
     {
@@ -2365,7 +2376,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "APOORVA"
     },
     {
@@ -3311,7 +3322,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "AUROIMPEX"
     },
     {
@@ -6769,6 +6780,17 @@
       "nseSymbol": "CORDSCABLE"
     },
     {
+      "symbol": "COREIN",
+      "name": "Coreintegra Consulting Services Limited",
+      "isin": "INE11ES01010",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "COREIN"
+    },
+    {
       "symbol": "COROMANDEL",
       "name": "Coromandel International Limited",
       "isin": "INE169A01031",
@@ -6963,7 +6985,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "CRESTO"
     },
     {
@@ -7447,7 +7469,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "DSFCL"
     },
     {
@@ -8822,7 +8844,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "EKI"
     },
     {
@@ -13435,17 +13457,6 @@
       "nseSymbol": "IMAGICAA"
     },
     {
-      "symbol": "IMPEXFERRO",
-      "name": "Impex Ferro Tech Limited",
-      "isin": "INE691G01015",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "IMPEXFERRO"
-    },
-    {
       "symbol": "INCREDIBLE",
       "name": "INCREDIBLE INDUSTRIES LIMITED",
       "isin": "INE452L01012",
@@ -15510,7 +15521,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "KMSUGAR"
     },
     {
@@ -15554,7 +15565,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "KABRAEXTRU"
     },
     {
@@ -17226,7 +17237,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "LCCINFOTEC"
     },
     {
@@ -19580,8 +19591,19 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "MONEYBOXX"
+    },
+    {
+      "symbol": "MONEYVIEW",
+      "name": "Moneyview Limited",
+      "isin": "INE0PTN01011",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "MONEYVIEW"
     },
     {
       "symbol": "MONOPHARMA",
@@ -22917,6 +22939,17 @@
       "nseSymbol": "PONNIERODE"
     },
     {
+      "symbol": "POOJALOGIS",
+      "name": "Pooja Logistics Limited",
+      "isin": "INE1C2Q01017",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "POOJALOGIS"
+    },
+    {
       "symbol": "POONAWALLA",
       "name": "Poonawalla Fincorp Limited",
       "isin": "INE511C01022",
@@ -24211,7 +24244,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "RAJTV"
     },
     {
@@ -25157,7 +25190,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "RKEC"
     },
     {
