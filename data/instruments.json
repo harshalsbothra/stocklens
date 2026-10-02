@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T00:48:11.716Z",
+  "updatedAt": "2026-10-02T00:45:46.875Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3168,
   "items": [
@@ -20163,7 +20163,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "NAMAN"
     },
     {
@@ -33517,7 +33517,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "VINOD"
     },
     {
