@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-06T00:49:29.321Z",
+  "updatedAt": "2026-10-07T00:50:40.999Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3177,
+  "count": 3176,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -15939,7 +15939,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "KATARIA"
     },
     {
@@ -17160,7 +17160,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "LANDSMILL"
     },
     {
@@ -25995,17 +25995,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SAKUMA"
-    },
-    {
-      "symbol": "SECL",
-      "name": "Salasar Exteriors and Contour Limited",
-      "isin": "INE00Y701026",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "sme",
-      "series": "SZ",
-      "nseSymbol": "SECL"
     },
     {
       "symbol": "SALASAR",
