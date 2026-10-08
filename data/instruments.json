@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-07T00:50:40.999Z",
+  "updatedAt": "2026-10-08T00:50:48.158Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3176,
+  "count": 3180,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -4620,7 +4620,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "BHAGYANGR"
     },
     {
@@ -11407,7 +11407,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "GOLDSTAR"
     },
     {
@@ -11640,6 +11640,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "GREAVESCOT"
+    },
+    {
+      "symbol": "GREENASIA",
+      "name": "Green Asia Impex Limited",
+      "isin": "INE1WDS01018",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "GREENASIA"
     },
     {
       "symbol": "GREENCHEF",
@@ -14069,7 +14080,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "INFINIUM"
     },
     {
@@ -15147,7 +15158,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "JSIPL"
     },
     {
@@ -20970,6 +20981,17 @@
       "nseSymbol": "NITTAGELA"
     },
     {
+      "symbol": "NITYAS",
+      "name": "Nityas Gems and Jewellery Limited",
+      "isin": "INE211501023",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "NITYAS"
+    },
+    {
       "symbol": "NIVABUPA",
       "name": "Niva Bupa Health Insurance Company Limited",
       "isin": "INE995S01015",
@@ -22079,6 +22101,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "PANSARI"
+    },
+    {
+      "symbol": "PAPADMALJI",
+      "name": "Papadmalji Agro Foods Limited",
+      "isin": "INE1V7901010",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "PAPADMALJI"
     },
     {
       "symbol": "PAR",
@@ -26956,7 +26989,7 @@
     {
       "symbol": "BUILDPRO",
       "name": "Shankara Buildpro Limited",
-      "isin": "INE24OJ01011",
+      "isin": "INE24OJ01029",
       "exchanges": [
         "NSE"
       ],
@@ -33816,6 +33849,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "VMM"
+    },
+    {
+      "symbol": "VNL",
+      "name": "Vishal Nirmiti Limited",
+      "isin": "INE1O5L01025",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "VNL"
     },
     {
       "symbol": "VISHNU",
