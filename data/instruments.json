@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-08T00:50:48.158Z",
+  "updatedAt": "2026-10-09T00:53:35.764Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3180,
+  "count": 3183,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -2875,6 +2875,17 @@
       "nseSymbol": "ASHAPURMIN"
     },
     {
+      "symbol": "AGOL",
+      "name": "Ashapuri Gold Ornament Limited",
+      "isin": "INE05FR01029",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "AGOL"
+    },
+    {
       "symbol": "ASHIANA",
       "name": "Ashiana Housing Limited",
       "isin": "INE365D01021",
@@ -4424,6 +4435,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "BLEL"
+    },
+    {
+      "symbol": "BELDING",
+      "name": "Belding India Limited",
+      "isin": "INE363L01045",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "BELDING"
     },
     {
       "symbol": "BELLACASA",
@@ -6085,17 +6107,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "CENTEXT"
-    },
-    {
-      "symbol": "CENTEXT-RE",
-      "name": "Century Extrusions Limited-RE",
-      "isin": "INE281A20018",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "CENTEXT-RE"
     },
     {
       "symbol": "CENTURYPLY",
@@ -9627,6 +9638,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "EUROTEXIND"
+    },
+    {
+      "symbol": "EVENTIONS",
+      "name": "Eventions Limited",
+      "isin": "INE20M201019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "EVENTIONS"
     },
     {
       "symbol": "EVEREADY",
@@ -20288,6 +20310,17 @@
       "nseSymbol": "NATCOPHARM"
     },
     {
+      "symbol": "NATCO-RE",
+      "name": "Natco Pharma Limited-RE",
+      "isin": "INE987B20018",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "NATCO-RE"
+    },
+    {
       "symbol": "NATHBIOGEN",
       "name": "Nath Bio-Genes (India) Limited",
       "isin": "INE448G01010",
@@ -28600,7 +28633,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "SONA"
     },
     {
@@ -29117,7 +29150,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "STLSTRINF"
     },
     {
