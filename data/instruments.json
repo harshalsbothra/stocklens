@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-09T00:53:35.764Z",
+  "updatedAt": "2026-10-10T00:51:57.575Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3183,
+  "count": 3182,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -16291,7 +16291,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "KHERIAAUTO"
     },
     {
@@ -22334,17 +22334,6 @@
       "nseSymbol": "PARTYCRUS"
     },
     {
-      "symbol": "PARTY-RE",
-      "name": "Party Cruisers Ltd-RE",
-      "isin": "INE06ZX20015",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "sme",
-      "series": "ST",
-      "nseSymbol": "PARTY-RE"
-    },
-    {
       "symbol": "PASHUPATI",
       "name": "Pashupati Cotspin Limited",
       "isin": "INE124Y01028",
@@ -25443,7 +25432,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "ROXHITECH"
     },
     {
@@ -28754,7 +28743,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "SPECTRAA"
     },
     {
