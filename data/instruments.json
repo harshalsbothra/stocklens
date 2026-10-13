@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-12T00:53:36.643Z",
+  "updatedAt": "2026-10-13T00:55:30.878Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3199,
+  "count": 3187,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -726,7 +726,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "ADISOFT"
     },
     {
@@ -1331,7 +1331,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "AKANKSHA"
     },
     {
@@ -3557,17 +3557,6 @@
       "nseSymbol": "DMART"
     },
     {
-      "symbol": "CCAVENUE",
-      "name": "AvenuesAI Limited",
-      "isin": "INE483S01020",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "EQ",
-      "nseSymbol": "CCAVENUE"
-    },
-    {
       "symbol": "AVG",
       "name": "AVG Logistics Limited",
       "isin": "INE680Z01018",
@@ -3696,7 +3685,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "AXIOMGAS"
     },
     {
@@ -4809,17 +4798,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "BHARATWIRE"
-    },
-    {
-      "symbol": "BGLOBAL",
-      "name": "Bharatiya Global Infomedia Limited",
-      "isin": "INE224M01013",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "BGLOBAL"
     },
     {
       "symbol": "BHARTIARTL",
@@ -6153,17 +6131,6 @@
       "nseSymbol": "CERA"
     },
     {
-      "symbol": "CEREBRAINT",
-      "name": "Cerebra Integrated Technologies Limited",
-      "isin": "INE345B01019",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "CEREBRAINT"
-    },
-    {
       "symbol": "CESC",
       "name": "CESC Limited",
       "isin": "INE486A01021",
@@ -6494,17 +6461,6 @@
       "nseSymbol": "CLAYCRAFT"
     },
     {
-      "symbol": "CLCIND",
-      "name": "CLC Industries Limited",
-      "isin": "INE376C01038",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "CLCIND"
-    },
-    {
       "symbol": "CLEANMAX",
       "name": "Clean Max Enviro Energy Solutions Limited",
       "isin": "INE647U01026",
@@ -6536,17 +6492,6 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "CSSL"
-    },
-    {
-      "symbol": "CMICABLES",
-      "name": "CMI Limited",
-      "isin": "INE981B01011",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "CMICABLES"
     },
     {
       "symbol": "CMRGREEN",
@@ -8846,17 +8791,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "EDELWEISS"
-    },
-    {
-      "symbol": "EDUCOMP",
-      "name": "Educomp Solutions Limited",
-      "isin": "INE216H01027",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "EDUCOMP"
     },
     {
       "symbol": "EFCIL",
@@ -13600,17 +13534,6 @@
       "nseSymbol": "IMAGICAA"
     },
     {
-      "symbol": "IMPEXFERRO",
-      "name": "Impex Ferro Tech Limited",
-      "isin": "INE691G01015",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "IMPEXFERRO"
-    },
-    {
       "symbol": "INCREDIBLE",
       "name": "INCREDIBLE INDUSTRIES LIMITED",
       "isin": "INE452L01012",
@@ -17285,17 +17208,6 @@
       "nseSymbol": "LT"
     },
     {
-      "symbol": "LASA",
-      "name": "Lasa Supergenerics Limited",
-      "isin": "INE670X01014",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "LASA"
-    },
-    {
       "symbol": "LASERPOWER",
       "name": "Laser Power & Infra Limited",
       "isin": "INE17IR01028",
@@ -18029,7 +17941,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "MADHUSUDAN"
     },
     {
@@ -18216,7 +18128,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "MRIL"
     },
     {
@@ -19822,7 +19734,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "MOREPENLAB"
     },
     {
@@ -20242,17 +20154,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "NDGL"
-    },
-    {
-      "symbol": "NAGAFERT",
-      "name": "Nagarjuna Fertilizers and Chemicals Limited",
-      "isin": "INE454M01024",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "NAGAFERT"
     },
     {
       "symbol": "NAGREEKCAP",
@@ -24281,6 +24182,17 @@
       "nseSymbol": "RSSOFTWARE"
     },
     {
+      "symbol": "RKFAL",
+      "name": "R.K. Fashion Accessories Limited",
+      "isin": "INE2O2Y01016",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "RKFAL"
+    },
+    {
       "symbol": "RPPINFRA",
       "name": "R.P.P. Infra Projects Limited",
       "isin": "INE324L01013",
@@ -24609,17 +24521,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "RAJSREESUG"
-    },
-    {
-      "symbol": "RAJVIR",
-      "name": "Rajvir Industries Limited",
-      "isin": "INE011H01014",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "RAJVIR"
     },
     {
       "symbol": "RALLIS",
@@ -25322,7 +25223,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "RFBL"
     },
     {
@@ -26184,6 +26085,17 @@
       "nseSymbol": "SAKUMA"
     },
     {
+      "symbol": "SECL",
+      "name": "Salasar Exteriors and Contour Limited",
+      "isin": "INE00Y701026",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "SZ",
+      "nseSymbol": "SECL"
+    },
+    {
       "symbol": "SALASAR",
       "name": "Salasar Techno Engineering Limited",
       "isin": "INE170V01027",
@@ -26224,7 +26136,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "SAMAY"
     },
     {
@@ -26842,17 +26754,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SEJALLTD"
-    },
-    {
-      "symbol": "SELMC",
-      "name": "SEL Manufacturing Company Limited",
-      "isin": "INE105I01020",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "SELMC"
     },
     {
       "symbol": "SELLOWRAP",
@@ -28417,17 +28318,6 @@
       "nseSymbol": "SKFINDIA"
     },
     {
-      "symbol": "SKIL",
-      "name": "SKIL Infrastructure Limited",
-      "isin": "INE429F01012",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "SKIL"
-    },
-    {
       "symbol": "SKIPPER",
       "name": "Skipper Limited",
       "isin": "INE439E01022",
@@ -28923,17 +28813,6 @@
       "nseSymbol": "SPECTSTM"
     },
     {
-      "symbol": "SPELS",
-      "name": "SPEL Semiconductor Limited",
-      "isin": "INE252A01019",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "SPELS"
-    },
-    {
       "symbol": "SPENCERS",
       "name": "Spencer's Retail Limited",
       "isin": "INE020801028",
@@ -29128,7 +29007,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "SRIVASAVI"
     },
     {
@@ -30052,7 +29931,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SURANI"
     },
     {
@@ -32718,17 +32597,6 @@
       "nseSymbol": "UNITDSPR"
     },
     {
-      "symbol": "UNIVAFOODS",
-      "name": "Univa Foods Limited",
-      "isin": "INE275F01019",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "UNIVAFOODS"
-    },
-    {
       "symbol": "UNIVASTU",
       "name": "Univastu India Limited",
       "isin": "INE562X01013",
@@ -33858,7 +33726,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "VINSYS"
     },
     {
