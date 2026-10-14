@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-13T00:55:30.878Z",
+  "updatedAt": "2026-10-14T01:08:07.057Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3187,
+  "count": 3185,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -1727,7 +1727,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ALUFLUOR"
     },
     {
@@ -14146,7 +14146,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "INFOLLION"
     },
     {
@@ -21894,17 +21894,6 @@
       "nseSymbol": "ORKLAINDIA"
     },
     {
-      "symbol": "ORTEL",
-      "name": "Ortel Communications Limited",
-      "isin": "INE849L01019",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "ORTEL"
-    },
-    {
       "symbol": "ORTINGLOBE",
       "name": "ORTIN GLOBAL LIMITED",
       "isin": "INE749B01020",
@@ -26083,17 +26072,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SAKUMA"
-    },
-    {
-      "symbol": "SECL",
-      "name": "Salasar Exteriors and Contour Limited",
-      "isin": "INE00Y701026",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "sme",
-      "series": "SZ",
-      "nseSymbol": "SECL"
     },
     {
       "symbol": "SALASAR",
