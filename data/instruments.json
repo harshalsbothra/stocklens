@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T01:08:07.057Z",
+  "updatedAt": "2026-10-15T01:05:44.156Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3185,
   "items": [
@@ -847,7 +847,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "ADROITIND"
     },
     {
@@ -6886,7 +6886,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "CPCAP"
     },
     {
@@ -9636,7 +9636,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "EUROTEXIND"
     },
     {
@@ -10373,7 +10373,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "GTECJAINX"
     },
     {
@@ -11554,17 +11554,6 @@
       "nseSymbol": "GCHOTELS"
     },
     {
-      "symbol": "GFSTEELS",
-      "name": "Grand Foundry Limited",
-      "isin": "INE534A01028",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "GFSTEELS"
-    },
-    {
       "symbol": "GRANDOAK",
       "name": "Grand Oak Canyons Distillery Limited",
       "isin": "INE926B01016",
@@ -11836,7 +11825,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "GSPLTRANS"
     },
     {
@@ -24101,7 +24090,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "QUINTEGRA"
     },
     {
@@ -24398,7 +24387,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ARENTERP"
     },
     {
@@ -30107,7 +30096,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "SWASTIKAIN"
     },
     {
@@ -30448,7 +30437,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "TARAPUR"
     },
     {
@@ -31486,6 +31475,17 @@
       "nseSymbol": "TIJARIA"
     },
     {
+      "symbol": "TIKONA",
+      "name": "Tikona Communication Limited",
+      "isin": "INE534A01028",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "TIKONA"
+    },
+    {
       "symbol": "TIL",
       "name": "TIL Limited",
       "isin": "INE806C01018",
@@ -32263,7 +32263,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "UDAYJEW"
     },
     {
