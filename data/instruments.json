@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T01:05:44.156Z",
+  "updatedAt": "2026-10-16T01:04:49.560Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3185,
   "items": [
@@ -1892,7 +1892,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "AMEYA"
     },
     {
@@ -4241,7 +4241,7 @@
     {
       "symbol": "BANSALWIRE",
       "name": "Bansal Wire Industries Limited",
-      "isin": "INE0B9K01025",
+      "isin": "INE0B9K01033",
       "exchanges": [
         "NSE"
       ],
@@ -5951,7 +5951,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "CEDAAR"
     },
     {
@@ -6820,7 +6820,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "COREIN"
     },
     {
@@ -14289,7 +14289,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "INSPIRE"
     },
     {
@@ -15587,7 +15587,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "KMSUGAR"
     },
     {
@@ -18887,7 +18887,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "MAWANASUG"
     },
     {
@@ -22616,7 +22616,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "PCCL"
     },
     {
@@ -23056,7 +23056,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "POOJALOGIS"
     },
     {
