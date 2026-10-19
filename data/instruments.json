@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-18T01:06:46.613Z",
+  "updatedAt": "2026-10-19T01:08:56.905Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3185,
+  "count": 3199,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -1771,7 +1771,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "AMANTA"
     },
     {
@@ -3557,6 +3557,17 @@
       "nseSymbol": "DMART"
     },
     {
+      "symbol": "CCAVENUE",
+      "name": "AvenuesAI Limited",
+      "isin": "INE483S01038",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "CCAVENUE"
+    },
+    {
       "symbol": "AVG",
       "name": "AVG Logistics Limited",
       "isin": "INE680Z01018",
@@ -4798,6 +4809,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "BHARATWIRE"
+    },
+    {
+      "symbol": "BGLOBAL",
+      "name": "Bharatiya Global Infomedia Limited",
+      "isin": "INE224M01013",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "BGLOBAL"
     },
     {
       "symbol": "BHARTIARTL",
@@ -6131,6 +6153,17 @@
       "nseSymbol": "CERA"
     },
     {
+      "symbol": "CEREBRAINT",
+      "name": "Cerebra Integrated Technologies Limited",
+      "isin": "INE345B01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "CEREBRAINT"
+    },
+    {
       "symbol": "CESC",
       "name": "CESC Limited",
       "isin": "INE486A01021",
@@ -6461,6 +6494,17 @@
       "nseSymbol": "CLAYCRAFT"
     },
     {
+      "symbol": "CLCIND",
+      "name": "CLC Industries Limited",
+      "isin": "INE376C01038",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "CLCIND"
+    },
+    {
       "symbol": "CLEANMAX",
       "name": "Clean Max Enviro Energy Solutions Limited",
       "isin": "INE647U01026",
@@ -6492,6 +6536,17 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "CSSL"
+    },
+    {
+      "symbol": "CMICABLES",
+      "name": "CMI Limited",
+      "isin": "INE981B01011",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "CMICABLES"
     },
     {
       "symbol": "CMRGREEN",
@@ -8791,6 +8846,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "EDELWEISS"
+    },
+    {
+      "symbol": "EDUCOMP",
+      "name": "Educomp Solutions Limited",
+      "isin": "INE216H01027",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "EDUCOMP"
     },
     {
       "symbol": "EFCIL",
@@ -12023,7 +12089,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "GUJRAFFIA"
     },
     {
@@ -12595,7 +12661,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "HEXAGON"
     },
     {
@@ -13521,6 +13587,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "IMAGICAA"
+    },
+    {
+      "symbol": "IMPEXFERRO",
+      "name": "Impex Ferro Tech Limited",
+      "isin": "INE691G01015",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "IMPEXFERRO"
     },
     {
       "symbol": "INCREDIBLE",
@@ -17197,6 +17274,17 @@
       "nseSymbol": "LT"
     },
     {
+      "symbol": "LASA",
+      "name": "Lasa Supergenerics Limited",
+      "isin": "INE670X01014",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "LASA"
+    },
+    {
       "symbol": "LASERPOWER",
       "name": "Laser Power & Infra Limited",
       "isin": "INE17IR01028",
@@ -19899,7 +19987,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "MTARTECH"
     },
     {
@@ -20145,6 +20233,17 @@
       "nseSymbol": "NDGL"
     },
     {
+      "symbol": "NAGAFERT",
+      "name": "Nagarjuna Fertilizers and Chemicals Limited",
+      "isin": "INE454M01024",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "NAGAFERT"
+    },
+    {
       "symbol": "NAGREEKCAP",
       "name": "Nagreeka Capital & Infrastructure Limited",
       "isin": "INE245I01016",
@@ -20308,17 +20407,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "NATCOPHARM"
-    },
-    {
-      "symbol": "NATCO-RE",
-      "name": "Natco Pharma Limited-RE",
-      "isin": "INE987B20018",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "NATCO-RE"
     },
     {
       "symbol": "NATHBIOGEN",
@@ -21883,6 +21971,17 @@
       "nseSymbol": "ORKLAINDIA"
     },
     {
+      "symbol": "ORTEL",
+      "name": "Ortel Communications Limited",
+      "isin": "INE849L01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "ORTEL"
+    },
+    {
       "symbol": "ORTINGLOBE",
       "name": "ORTIN GLOBAL LIMITED",
       "isin": "INE749B01020",
@@ -23155,7 +23254,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "PPAP"
     },
     {
@@ -24499,6 +24598,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "RAJSREESUG"
+    },
+    {
+      "symbol": "RAJVIR",
+      "name": "Rajvir Industries Limited",
+      "isin": "INE011H01014",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "RAJVIR"
     },
     {
       "symbol": "RALLIS",
@@ -26723,6 +26833,17 @@
       "nseSymbol": "SEJALLTD"
     },
     {
+      "symbol": "SELMC",
+      "name": "SEL Manufacturing Company Limited",
+      "isin": "INE105I01020",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "SELMC"
+    },
+    {
       "symbol": "SELLOWRAP",
       "name": "Sellowrap Industries Limited",
       "isin": "INE0IJF01013",
@@ -28285,6 +28406,17 @@
       "nseSymbol": "SKFINDIA"
     },
     {
+      "symbol": "SKIL",
+      "name": "SKIL Infrastructure Limited",
+      "isin": "INE429F01012",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "SKIL"
+    },
+    {
       "symbol": "SKIPPER",
       "name": "Skipper Limited",
       "isin": "INE439E01022",
@@ -28380,7 +28512,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "SMARTLINK"
     },
     {
@@ -28778,6 +28910,17 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "SPECTSTM"
+    },
+    {
+      "symbol": "SPELS",
+      "name": "SPEL Semiconductor Limited",
+      "isin": "INE252A01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "SPELS"
     },
     {
       "symbol": "SPENCERS",
@@ -31834,7 +31977,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "TRANSWORLD"
     },
     {
@@ -32384,7 +32527,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "UMAEXPORTS"
     },
     {
@@ -32573,6 +32716,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "UNITDSPR"
+    },
+    {
+      "symbol": "UNIVAFOODS",
+      "name": "Univa Foods Limited",
+      "isin": "INE275F01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "UNIVAFOODS"
     },
     {
       "symbol": "UNIVASTU",
