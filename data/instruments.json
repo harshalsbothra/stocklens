@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-19T01:08:56.905Z",
+  "updatedAt": "2026-10-20T01:10:55.276Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3199,
+  "count": 3200,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -4510,7 +4510,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "BMISL"
     },
     {
@@ -8305,7 +8305,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "DIVINEHIRA"
     },
     {
@@ -12760,7 +12760,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "HIMALAYAN"
     },
     {
@@ -14927,7 +14927,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "JALAN"
     },
     {
@@ -23727,7 +23727,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "PRIZOR"
     },
     {
@@ -26171,6 +26171,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SAKUMA"
+    },
+    {
+      "symbol": "SECL",
+      "name": "Salasar Exteriors and Contour Limited",
+      "isin": "INE00Y701026",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "SZ",
+      "nseSymbol": "SECL"
     },
     {
       "symbol": "SALASAR",
@@ -33088,7 +33099,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "MADHAVBAUG"
     },
     {
