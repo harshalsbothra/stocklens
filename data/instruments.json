@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-21T01:10:16.368Z",
+  "updatedAt": "2026-10-22T01:08:21.158Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3189,
+  "count": 3190,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -5588,7 +5588,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "CKKRETAIL"
     },
     {
@@ -6831,7 +6831,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "COREIN"
     },
     {
@@ -7733,7 +7733,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "DELAPLEX"
     },
     {
@@ -10309,6 +10309,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "UTLSOLAR"
+    },
+    {
+      "symbol": "FUSIONCX",
+      "name": "Fusion CX Limited",
+      "isin": "INE0N2201019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "FUSIONCX"
     },
     {
       "symbol": "FUSION",
@@ -15362,7 +15373,7 @@
     {
       "symbol": "JSWDULUX",
       "name": "JSW Dulux Limited",
-      "isin": "INE133A01011",
+      "isin": "INE133A01029",
       "exchanges": [
         "NSE"
       ],
@@ -22341,7 +22352,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "BZ",
       "nseSymbol": "PARSVNATH"
     },
     {
@@ -26094,17 +26105,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SAKUMA"
-    },
-    {
-      "symbol": "SECL",
-      "name": "Salasar Exteriors and Contour Limited",
-      "isin": "INE00Y701026",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "sme",
-      "series": "SZ",
-      "nseSymbol": "SECL"
     },
     {
       "symbol": "SALASAR",
@@ -32969,6 +32969,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "VAIBHAVGBL"
+    },
+    {
+      "symbol": "LOANFRONT",
+      "name": "Vaibhav Vyapaar Limited",
+      "isin": "INE1KAA01025",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "LOANFRONT"
     },
     {
       "symbol": "MADHAVBAUG",
