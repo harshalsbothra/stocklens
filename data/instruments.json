@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-22T01:08:21.158Z",
+  "updatedAt": "2026-10-23T01:13:15.537Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3190,
+  "count": 3195,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -3779,7 +3779,7 @@
     {
       "symbol": "AZADIND",
       "name": "Azad India Mobility Limited",
-      "isin": "INE566M01017",
+      "isin": "INE566M01025",
       "exchanges": [
         "NSE"
       ],
@@ -5306,6 +5306,17 @@
       "nseSymbol": "BSHSL"
     },
     {
+      "symbol": "BONFIG",
+      "name": "Bonfiglioli Transmissions Limited",
+      "isin": "INE28SO01013",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "BONFIG"
+    },
+    {
       "symbol": "BONLON",
       "name": "Bonlon Industries Limited",
       "isin": "INE0B9A01018",
@@ -6611,7 +6622,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "COMFINTE"
     },
     {
@@ -11682,7 +11693,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "GREENASIA"
     },
     {
@@ -12188,7 +12199,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BZ",
       "nseSymbol": "HAMPTON"
     },
     {
@@ -13314,6 +13325,17 @@
       "nseSymbol": "ICICIBANK"
     },
     {
+      "symbol": "ICICILIFE",
+      "name": "ICICI Life Insurance Limited",
+      "isin": "INE726G01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "ICICILIFE"
+    },
+    {
       "symbol": "ICICIGI",
       "name": "ICICI Lombard General Insurance Company Limited",
       "isin": "INE765G01017",
@@ -13334,17 +13356,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "ICICIAMC"
-    },
-    {
-      "symbol": "ICICIPRULI",
-      "name": "ICICI Prudential Life Insurance Company Limited",
-      "isin": "INE726G01019",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "EQ",
-      "nseSymbol": "ICICIPRULI"
     },
     {
       "symbol": "ICRA",
@@ -21054,7 +21065,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "NITYAS"
     },
     {
@@ -22187,7 +22198,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "PAPADMALJI"
     },
     {
@@ -24820,6 +24831,17 @@
       "nseSymbol": "RELTD"
     },
     {
+      "symbol": "RAVITA",
+      "name": "Ravita Engineering Services Limited",
+      "isin": "INE1UEL01023",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "RAVITA"
+    },
+    {
       "symbol": "RAYMONDLSL",
       "name": "Raymond Lifestyle Limited",
       "isin": "INE02ID01020",
@@ -25962,6 +25984,17 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "SAHAJSOLAR"
+    },
+    {
+      "symbol": "SMT",
+      "name": "Sahajanand Medical Technologies Limited",
+      "isin": "INE356Y01018",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "SMT"
     },
     {
       "symbol": "SAHANA",
@@ -31684,6 +31717,17 @@
       "nseSymbol": "TOLINS"
     },
     {
+      "symbol": "TONBO",
+      "name": "Tonbo Imaging India Limited",
+      "isin": "INE0LDG01026",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "TONBO"
+    },
+    {
       "symbol": "TORNTPHARM",
       "name": "Torrent Pharmaceuticals Limited",
       "isin": "INE685A01028",
@@ -33968,7 +34012,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "VNL"
     },
     {
@@ -34078,7 +34122,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "BZ",
       "nseSymbol": "VIVIMEDLAB"
     },
     {
@@ -34982,6 +35026,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "ZENSARTECH"
+    },
+    {
+      "symbol": "ZETWERK",
+      "name": "Zetwerk Manufacturing Businesses Limited",
+      "isin": "INE09PO01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "ZETWERK"
     },
     {
       "symbol": "ZFCVINDIA",
