@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T01:13:15.537Z",
+  "updatedAt": "2026-10-24T01:16:32.982Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3195,
   "items": [
@@ -4510,7 +4510,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "BMISL"
     },
     {
@@ -9669,7 +9669,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "EVENTIONS"
     },
     {
@@ -19206,7 +19206,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "MEGAFLEX"
     },
     {
@@ -29018,7 +29018,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SPCON"
     },
     {
