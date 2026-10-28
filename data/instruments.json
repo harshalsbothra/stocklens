@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-27T01:15:29.838Z",
+  "updatedAt": "2026-10-28T01:29:01.793Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3198,
+  "count": 3200,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -5304,6 +5304,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "BSHSL"
+    },
+    {
+      "symbol": "BONDADA",
+      "name": "Bondada Engineering Limited",
+      "isin": "INE0Q8P01029",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "BONDADA"
     },
     {
       "symbol": "BONFIG",
@@ -15261,6 +15272,17 @@
       "nseSymbol": "JIOFIN"
     },
     {
+      "symbol": "JPL",
+      "name": "Jio Platforms Limited",
+      "isin": "INE0BJO01010",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "JPL"
+    },
+    {
       "symbol": "JITFINFRA",
       "name": "JITF Infralogistics Limited",
       "isin": "INE863T01013",
@@ -22312,6 +22334,17 @@
       "nseSymbol": "PARAS"
     },
     {
+      "symbol": "PARASHLTH",
+      "name": "Paras Healthcare Limited",
+      "isin": "INE661T01029",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "PARASHLTH"
+    },
+    {
       "symbol": "PARASPETRO",
       "name": "Paras Petrofils Limited",
       "isin": "INE162C01024",
@@ -24222,7 +24255,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "RKFAL"
     },
     {
@@ -26138,17 +26171,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SAKUMA"
-    },
-    {
-      "symbol": "SECL",
-      "name": "Salasar Exteriors and Contour Limited",
-      "isin": "INE00Y701026",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "sme",
-      "series": "SZ",
-      "nseSymbol": "SECL"
     },
     {
       "symbol": "SALASAR",
