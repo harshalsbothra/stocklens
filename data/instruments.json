@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-28T01:29:01.793Z",
+  "updatedAt": "2026-10-29T06:08:44.802Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3200,
+  "count": 3201,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -13875,6 +13875,17 @@
       "nseSymbol": "INDTERRAIN"
     },
     {
+      "symbol": "INDTONER",
+      "name": "Indian Toners & Developers Limited",
+      "isin": "INE826B01026",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "INDTONER"
+    },
+    {
       "symbol": "INDIFRA",
       "name": "Indifra Limited",
       "isin": "INE0PS301014",
@@ -25025,7 +25036,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "REFRACTORY"
     },
     {
@@ -27698,7 +27709,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "SHREERAMA"
     },
     {
