@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T06:08:44.802Z",
+  "updatedAt": "2026-10-30T06:09:06.280Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3201,
   "items": [
@@ -2453,7 +2453,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "ARABIAN"
     },
     {
@@ -2551,8 +2551,8 @@
       "exchanges": [
         "NSE"
       ],
-      "assetType": "sme",
-      "series": "SM",
+      "assetType": "equity",
+      "series": "EQ",
       "nseSymbol": "ARHAM"
     },
     {
@@ -8921,7 +8921,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ELCIDIN"
     },
     {
@@ -10912,7 +10912,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "GFLLIMITED"
     },
     {
@@ -12705,7 +12705,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "HILINFRA"
     },
     {
@@ -15829,7 +15829,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "KICL"
     },
     {
@@ -15851,7 +15851,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "KAMAHOLD"
     },
     {
@@ -18194,7 +18194,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "MAHSCOOTER"
     },
     {
@@ -20328,7 +20328,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "NSIL"
     },
     {
@@ -22858,7 +22858,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "PILANIINVS"
     },
     {
@@ -28204,7 +28204,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "SILINV"
     },
     {
@@ -28831,7 +28831,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SPRL"
     },
     {
@@ -32318,7 +32318,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "TVSHLTD"
     },
     {
@@ -34661,7 +34661,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "WILLAMAGOR"
     },
     {
