@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-03T07:04:10.326Z",
+  "updatedAt": "2026-11-04T06:48:27.376Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3204,
+  "count": 3209,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -9365,6 +9365,17 @@
       "nseSymbol": "ENKEIWHEL"
     },
     {
+      "symbol": "ENNATURE",
+      "name": "Ennature Bio Pharma Limited",
+      "isin": "INE2WCT01016",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "ENNATURE"
+    },
+    {
       "symbol": "ENSER",
       "name": "Enser Communications Limited",
       "isin": "INE0R9I01021",
@@ -9737,6 +9748,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "EKC"
+    },
+    {
+      "symbol": "EVONILE",
+      "name": "Evonile Pharma Limited",
+      "isin": "INE234A01025",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "EVONILE"
     },
     {
       "symbol": "EXCELINDUS",
@@ -13521,6 +13543,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "IGARASHI"
+    },
+    {
+      "symbol": "IGLSPIRITS",
+      "name": "IGL Spirits Limited",
+      "isin": "INE2W6901017",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "IGLSPIRITS"
     },
     {
       "symbol": "IIFLCAPS",
@@ -17934,6 +17967,17 @@
       "nseSymbol": "MCL"
     },
     {
+      "symbol": "MKJEWELS",
+      "name": "M. K. Sons Fine Jewels Limited",
+      "isin": "INE2IXO01012",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "MKJEWELS"
+    },
+    {
       "symbol": "MKEXIM",
       "name": "M.K. Exim (India) Limited",
       "isin": "INE227F01010",
@@ -19318,6 +19362,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "MIIL"
+    },
+    {
+      "symbol": "MELSTAR",
+      "name": "Melstar Information Technologies Limited",
+      "isin": "INE817A01050",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "MELSTAR"
     },
     {
       "symbol": "MENONBE",
@@ -21254,17 +21309,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "NOVAAGRI"
-    },
-    {
-      "symbol": "NOVARTIND",
-      "name": "Novartis India Limited",
-      "isin": "INE234A01025",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "EQ",
-      "nseSymbol": "NOVARTIND"
     },
     {
       "symbol": "NRBBEARING",
@@ -32861,6 +32905,17 @@
       "nseSymbol": "URBANCO"
     },
     {
+      "symbol": "URBAN-RE",
+      "name": "Urban Enviro Waste Ltd-RE",
+      "isin": "INE0O0220019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "URBAN-RE"
+    },
+    {
       "symbol": "URBAN",
       "name": "Urban Enviro Waste Management Limited",
       "isin": "INE0O0201019",
@@ -33121,7 +33176,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "LOANFRONT"
     },
     {
