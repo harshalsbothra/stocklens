@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-04T06:48:27.376Z",
+  "updatedAt": "2026-11-05T07:08:26.501Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3209,
+  "count": 3211,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -22,7 +22,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "21STCENMGM"
     },
     {
@@ -5284,6 +5284,17 @@
       "nseSymbol": "BOHRAIND"
     },
     {
+      "symbol": "BCSSL",
+      "name": "Bombay Coated and Special Steels Limited",
+      "isin": "INE0XFY01011",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "BCSSL"
+    },
+    {
       "symbol": "BOMDYEING",
       "name": "Bombay Dyeing & Mfg Company Limited",
       "isin": "INE032A01023",
@@ -5524,6 +5535,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "BRIGHTBR"
+    },
+    {
+      "symbol": "BRIGHTOUTD",
+      "name": "Bright Outdoor Media Limited",
+      "isin": "INE0OMI01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "BRIGHTOUTD"
     },
     {
       "symbol": "BCG",
@@ -12084,7 +12106,7 @@
     {
       "symbol": "GNRL",
       "name": "Gujarat Natural Resources Limited",
-      "isin": "INE207H01018",
+      "isin": "INE207H01026",
       "exchanges": [
         "NSE"
       ],
@@ -19536,7 +19558,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "MILTON"
     },
     {
@@ -24948,7 +24970,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "RAVITA"
     },
     {
