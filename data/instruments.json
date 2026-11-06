@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-05T07:08:26.501Z",
+  "updatedAt": "2026-11-06T07:08:03.444Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3211,
+  "count": 3213,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -3882,8 +3882,8 @@
       "exchanges": [
         "NSE"
       ],
-      "assetType": "sme",
-      "series": "SM",
+      "assetType": "equity",
+      "series": "EQ",
       "nseSymbol": "BAHETI"
     },
     {
@@ -12742,6 +12742,17 @@
       "nseSymbol": "HFCL"
     },
     {
+      "symbol": "HGSINDIALT",
+      "name": "HGS (India) Limited",
+      "isin": "INE813R01012",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "HGSINDIALT"
+    },
+    {
       "symbol": "HIGREEN",
       "name": "Hi-Green Carbon Limited",
       "isin": "INE0PIC01017",
@@ -16660,7 +16671,7 @@
     {
       "symbol": "KMEW",
       "name": "Knowledge Marine & Engineering Works Limited",
-      "isin": "INE0CJD01029",
+      "isin": "INE0CJD01037",
       "exchanges": [
         "NSE"
       ],
@@ -19142,6 +19153,17 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "MAXVOLT"
+    },
+    {
+      "symbol": "MAXENGS",
+      "name": "Maxwell Engineering Solutions Limited",
+      "isin": "INE1W3F01014",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "MAXENGS"
     },
     {
       "symbol": "MAYASHEEL",
@@ -23738,7 +23760,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "PRIORITY"
     },
     {
@@ -33616,7 +33638,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "VENUSREM"
     },
     {
@@ -34056,7 +34078,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "VIRAT"
     },
     {
