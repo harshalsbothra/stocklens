@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-07T06:19:53.773Z",
+  "updatedAt": "2026-11-08T06:26:34.633Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3213,
+  "count": 3216,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -3256,7 +3256,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ATLANTAA"
     },
     {
@@ -5126,7 +5126,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "BLUECHIP"
     },
     {
@@ -8228,7 +8228,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "DIGJAMLMTD"
     },
     {
@@ -10197,7 +10197,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "FLEXITUFF"
     },
     {
@@ -10219,7 +10219,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "FWSTC"
     },
     {
@@ -10505,7 +10505,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "GATECH"
     },
     {
@@ -10516,7 +10516,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "GATECHDVR"
     },
     {
@@ -12969,7 +12969,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "HMVL"
     },
     {
@@ -17512,7 +17512,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "LEMERITE"
     },
     {
@@ -18436,7 +18436,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "MAJESAUT"
     },
     {
@@ -21549,7 +21549,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "OILCOUNTUB"
     },
     {
@@ -21813,7 +21813,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "ONYX"
     },
     {
@@ -22079,6 +22079,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "ORKLAINDIA"
+    },
+    {
+      "symbol": "ORTEL",
+      "name": "Ortel Communications Limited",
+      "isin": "INE849L01019",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BZ",
+      "nseSymbol": "ORTEL"
     },
     {
       "symbol": "ORTINGLOBE",
@@ -25729,7 +25740,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "RSDFIN"
     },
     {
@@ -27236,7 +27247,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "SHALPAINTS"
     },
     {
@@ -28281,7 +28292,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "SIGNORIA"
     },
     {
@@ -32318,7 +32329,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "ST",
+      "series": "SM",
       "nseSymbol": "TSC"
     },
     {
@@ -33477,6 +33488,17 @@
       "nseSymbol": "MANYAVAR"
     },
     {
+      "symbol": "VPFL",
+      "name": "Vedant Poly Fabs Limited",
+      "isin": "INE2RWX01016",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "SM",
+      "nseSymbol": "VPFL"
+    },
+    {
       "symbol": "VAML",
       "name": "Vedanta Aluminium Metal Limited",
       "isin": "INE1CDF01017",
@@ -33552,6 +33574,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "VEEDOL"
+    },
+    {
+      "symbol": "VEEFIN",
+      "name": "Veefin Solutions Limited",
+      "isin": "INE0Q0M01015",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "VEEFIN"
     },
     {
       "symbol": "VEEGALAND",
@@ -35167,7 +35200,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ZEEMEDIA"
     },
     {
