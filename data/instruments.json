@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-11T06:53:57.980Z",
+  "updatedAt": "2026-11-12T07:29:24.216Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3217,
+  "count": 3218,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -2761,7 +2761,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "ARVEE"
     },
     {
@@ -5126,7 +5126,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "BLUECHIP"
     },
     {
@@ -9911,7 +9911,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "FASCINATE"
     },
     {
@@ -11055,7 +11055,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "GIRIRAJ"
     },
     {
@@ -28633,7 +28633,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SMARTEN"
     },
     {
@@ -30274,6 +30274,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "SUVIDHAA"
+    },
+    {
+      "symbol": "SUVID-RE",
+      "name": "Suvidhaa Infoserve Limited-RE",
+      "isin": "INE018420013",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "SUVID-RE"
     },
     {
       "symbol": "SUYOG",
@@ -33770,7 +33781,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "VIAZ"
     },
     {
