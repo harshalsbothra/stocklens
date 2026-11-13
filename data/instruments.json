@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T07:29:24.216Z",
+  "updatedAt": "2026-11-13T07:00:32.298Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3218,
   "items": [
@@ -121,7 +121,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "AGUL"
     },
     {
@@ -1067,7 +1067,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "AFFORDABLE"
     },
     {
@@ -4224,7 +4224,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "BANKA"
     },
     {
@@ -8228,7 +8228,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "DIGJAMLMTD"
     },
     {
@@ -9635,8 +9635,8 @@
       "exchanges": [
         "NSE"
       ],
-      "assetType": "sme",
-      "series": "SM",
+      "assetType": "equity",
+      "series": "EQ",
       "nseSymbol": "ESFL"
     },
     {
@@ -15818,7 +15818,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "KKJEWELS"
     },
     {
@@ -17831,7 +17831,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "LAL"
     },
     {
@@ -18447,7 +18447,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "MAKERSL"
     },
     {
@@ -23309,7 +23309,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "POSITRON"
     },
     {
@@ -28358,7 +28358,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SILKFLEX"
     },
     {
