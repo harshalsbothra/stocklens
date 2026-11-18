@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-17T08:14:37.659Z",
+  "updatedAt": "2026-11-18T07:47:44.164Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3216,
+  "count": 3215,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -5313,7 +5313,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "BMETRICS"
     },
     {
@@ -8485,17 +8485,6 @@
       "nseSymbol": "DPSCLTD"
     },
     {
-      "symbol": "DRAGARWQ",
-      "name": "Dr Agarwals Eye Hospital Limited",
-      "isin": "INE934C01018",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "EQ",
-      "nseSymbol": "DRAGARWQ"
-    },
-    {
       "symbol": "AGARWALEYE",
       "name": "Dr. Agarwal's Health Care Limited",
       "isin": "INE943P01029",
@@ -9121,17 +9110,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "ELLEN"
-    },
-    {
-      "symbol": "ELPROINTL",
-      "name": "Elpro International Limited",
-      "isin": "INE579B01039",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "EQ",
-      "nseSymbol": "ELPROINTL"
     },
     {
       "symbol": "EMAPARTNER",
@@ -10978,7 +10956,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "GFLLIMITED"
     },
     {
@@ -14885,6 +14863,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "JGCHEM"
+    },
+    {
+      "symbol": "JKSHAH",
+      "name": "J.K.Shah Commerce Education Limited",
+      "isin": "INE2OD001016",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "JKSHAH"
     },
     {
       "symbol": "JKIL",
@@ -20460,7 +20449,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "NSIL"
     },
     {
@@ -20592,7 +20581,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "NATCAPSUQ"
     },
     {
@@ -22990,7 +22979,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "PILANIINVS"
     },
     {
