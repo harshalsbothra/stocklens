@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T07:47:44.164Z",
+  "updatedAt": "2026-11-19T07:43:37.749Z",
   "source": "NSE/BSE exchange security masters",
   "count": 3215,
   "items": [
@@ -4048,7 +4048,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "BALAJIPHOS"
     },
     {
@@ -5458,6 +5458,17 @@
       "assetType": "sme",
       "series": "SM",
       "nseSymbol": "BRACEPORT"
+    },
+    {
+      "symbol": "BRAHMVIRAT",
+      "name": "BRAHM VIRAT INDUSTRIES CORPORATION LIMITED",
+      "isin": "INE467D01017",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "BRAHMVIRAT"
     },
     {
       "symbol": "BRAHMINFRA",
@@ -9372,7 +9383,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "ENNATURE"
     },
     {
@@ -10175,7 +10186,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "FLEXITUFF"
     },
     {
@@ -13563,7 +13574,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "IGLSPIRITS"
     },
     {
@@ -24046,7 +24057,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "PULZ"
     },
     {
@@ -34091,17 +34102,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "VIPULLTD"
-    },
-    {
-      "symbol": "VIRAT",
-      "name": "Virat Industries Limited",
-      "isin": "INE467D01017",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "VIRAT"
     },
     {
       "symbol": "VIRINCHI",
