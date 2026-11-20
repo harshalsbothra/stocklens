@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-19T07:43:37.749Z",
+  "updatedAt": "2026-11-20T07:35:13.061Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3215,
+  "count": 3214,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -5291,7 +5291,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "BCSSL"
     },
     {
@@ -6712,17 +6712,6 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "COMPEAU"
-    },
-    {
-      "symbol": "COMPINFO",
-      "name": "Compuage Infocom Limited",
-      "isin": "INE070C01037",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BZ",
-      "nseSymbol": "COMPINFO"
     },
     {
       "symbol": "COMPUSOFT",
@@ -20020,7 +20009,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "MMEL"
     },
     {
@@ -27797,7 +27786,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SHREEKARNI"
     },
     {
@@ -28109,15 +28098,15 @@
       "nseSymbol": "SHUBHSHREE"
     },
     {
-      "symbol": "SHUKRAPHAR",
-      "name": "Shukra Pharmaceuticals Limited",
+      "symbol": "SHUKRAMED",
+      "name": "Shukra Medtech Limited",
       "isin": "INE551C01044",
       "exchanges": [
         "NSE"
       ],
       "assetType": "equity",
       "series": "EQ",
-      "nseSymbol": "SHUKRAPHAR"
+      "nseSymbol": "SHUKRAMED"
     },
     {
       "symbol": "SHYAMCENT",
@@ -28336,7 +28325,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "BE",
+      "series": "EQ",
       "nseSymbol": "SILINV"
     },
     {
