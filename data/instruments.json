@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-25T08:56:43.702Z",
+  "updatedAt": "2026-11-26T08:42:47.186Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3214,
+  "count": 3216,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -7143,6 +7143,17 @@
       "nseSymbol": "CROWN"
     },
     {
+      "symbol": "CRYSTALCP",
+      "name": "Crystal Crop Protection Limited",
+      "isin": "INE101P01016",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "CRYSTALCP"
+    },
+    {
       "symbol": "CSBBANK",
       "name": "CSB Bank Limited",
       "isin": "INE679A01013",
@@ -7502,7 +7513,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "DCI"
     },
     {
@@ -18029,7 +18040,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "MVKAGRO"
     },
     {
@@ -20079,6 +20090,17 @@
       "nseSymbol": "MRF"
     },
     {
+      "symbol": "MROTEK",
+      "name": "MRO-TEK Networks Limited",
+      "isin": "INE398B01018",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "MROTEK"
+    },
+    {
       "symbol": "BECTORFOOD",
       "name": "Mrs. Bectors Food Specialities Limited",
       "isin": "INE495P01020",
@@ -21735,8 +21757,8 @@
       "exchanges": [
         "NSE"
       ],
-      "assetType": "sme",
-      "series": "SM",
+      "assetType": "equity",
+      "series": "EQ",
       "nseSymbol": "OLIL"
     },
     {
@@ -23564,6 +23586,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "PRAXIS"
+    },
+    {
+      "symbol": "PRAXIS-RE3",
+      "name": "Praxis Home Retail Limited-RE",
+      "isin": "INE546Y20048",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "PRAXIS-RE3"
     },
     {
       "symbol": "PRECAM",
@@ -28930,7 +28963,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "SOTAC"
     },
     {
@@ -32685,17 +32718,6 @@
       "nseSymbol": "UMAEXPORTS"
     },
     {
-      "symbol": "UMIYA-MRO",
-      "name": "UMIYA BUILDCON LIMITED",
-      "isin": "INE398B01018",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "EQ",
-      "nseSymbol": "UMIYA-MRO"
-    },
-    {
       "symbol": "UNICHEMLAB",
       "name": "Unichem Laboratories Limited",
       "isin": "INE351A01035",
@@ -32835,7 +32857,7 @@
         "NSE"
       ],
       "assetType": "equity",
-      "series": "EQ",
+      "series": "BE",
       "nseSymbol": "UFBL"
     },
     {
