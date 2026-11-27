@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-26T08:42:47.186Z",
+  "updatedAt": "2026-11-27T08:53:56.980Z",
   "source": "NSE/BSE exchange security masters",
-  "count": 3216,
+  "count": 3219,
   "items": [
     {
       "symbol": "20MICRONS",
@@ -3091,7 +3091,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "ASPIRE"
     },
     {
@@ -12610,6 +12610,17 @@
       "nseSymbol": "HEGAM"
     },
     {
+      "symbol": "HEGRAPHITE",
+      "name": "HEG Limited",
+      "isin": "INE0Y9J01020",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "HEGRAPHITE"
+    },
+    {
       "symbol": "HEIDELBERG",
       "name": "HeidelbergCement India Limited",
       "isin": "INE578A01017",
@@ -17835,17 +17846,6 @@
       "nseSymbol": "LORDSCHLO"
     },
     {
-      "symbol": "LAL",
-      "name": "Lorenzini Apparels Limited",
-      "isin": "INE740X01023",
-      "exchanges": [
-        "NSE"
-      ],
-      "assetType": "equity",
-      "series": "BE",
-      "nseSymbol": "LAL"
-    },
-    {
       "symbol": "LOTUSCHO",
       "name": "Lotus Chocolate Company Limited",
       "isin": "INE026D01011",
@@ -18273,6 +18273,17 @@
       "assetType": "equity",
       "series": "BE",
       "nseSymbol": "MAHASTEEL"
+    },
+    {
+      "symbol": "MAHACOAL",
+      "name": "Mahanadi Coalfields Limited",
+      "isin": "INE03K401026",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "EQ",
+      "nseSymbol": "MAHACOAL"
     },
     {
       "symbol": "MGL",
@@ -19945,6 +19956,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "MONTECARLO"
+    },
+    {
+      "symbol": "MONTEIL",
+      "name": "MONTEIL LIMITED",
+      "isin": "INE740X01023",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "equity",
+      "series": "BE",
+      "nseSymbol": "MONTEIL"
     },
     {
       "symbol": "MORARJEE",
@@ -24332,7 +24354,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "QUICKTOUCH"
     },
     {
@@ -33330,7 +33352,7 @@
         "NSE"
       ],
       "assetType": "sme",
-      "series": "SM",
+      "series": "ST",
       "nseSymbol": "VALUE360"
     },
     {
@@ -33424,7 +33446,7 @@
     {
       "symbol": "VGL",
       "name": "VARVEE GLOBAL LIMITED",
-      "isin": "INE273D01027",
+      "isin": "INE273D01035",
       "exchanges": [
         "NSE"
       ],
@@ -34630,6 +34652,17 @@
       "assetType": "equity",
       "series": "EQ",
       "nseSymbol": "CORDELIA"
+    },
+    {
+      "symbol": "WATRANA",
+      "name": "Watrana Rentals Limited",
+      "isin": "INE11NS01011",
+      "exchanges": [
+        "NSE"
+      ],
+      "assetType": "sme",
+      "series": "ST",
+      "nseSymbol": "WATRANA"
     },
     {
       "symbol": "WEWIN",
